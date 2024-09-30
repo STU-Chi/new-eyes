@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Encryption Translator</title>
+    <link rel="stylesheet" href="ch4.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Text Encryption Translator</h1>
+         <button id="back-button" class="back-button">Back</button>
+
+         <style>
+
+         .buttons button:hover, .vigenere-section button:hover {
+              background-color: #f5f5f580;
+             
+        }
+             /* 按鈕在滑鼠懸停時的效果 */
+         .back-button:hover {
+            background-color: #ffffffa2; /* 背景變成螢光綠 */
+        
+        }
+        </style>
+
+        <!-- Single Input/Output Text Area -->
+        <textarea id="text-area" placeholder="Enter text or see output here"></textarea>
+
+        <!-- Encryption Buttons -->
+        <div class="buttons">
+            <button onclick="caesarCipher(-3)">Caesar -3</button>
+            <button onclick="caesarCipher(3)">Caesar +3</button>
+            <button onclick="atbashcipher()">Atbash cipher</button>
+            <button onclick="a1z26Cipher()">A1Z26</button>
+            <button onclick="binarycipher()">Binary cipher</button>
+            <button onclick="morsecipher()">Morse cipher</button>
+        </div>
+
+        <!-- Vigenere Section -->
+        <div class="vigenere-section">
+            <input type="text" id="vigenere-key" placeholder="Enter Vigenere Key">
+            <button onclick="vigenereEncrypt()">Vigenere Encrypt</button>
+            <button onclick="vigenereDecrypt()">Vigenere Decrypt</button>
+            <button onclick="hliexscipher()">Hliex's cipher</button>
+        </div>
+    </div>
+
+    <script src="ch4.js"></script>
+</body>
+</html>

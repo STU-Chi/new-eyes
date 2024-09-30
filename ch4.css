@@ -1,0 +1,142 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+   
+    font-family: 'Courier New', Courier, monospace; /* 終端機風格字體 */
+    color:#fcfcfc;
+    background-color: #000000; /* 深藍色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease; /* 切換過渡 */
+    transform: translateY(0);
+}
+
+/* 禁用整個頁面的滾動 */
+body {
+    overflow: hidden; /* 禁用滾動條 */
+}
+
+.container {
+    
+    background-color: #000000;
+    border-radius: 5px;
+    padding: 70px;
+    box-shadow: 0 0 15px rgb(255, 255, 255);
+    text-align: center;
+    
+}
+
+.back-button {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    left: 20px;
+}
+
+body.slide-down {
+    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+}
+.back-button {
+    
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    margin-bottom: 30px;
+    padding: 15px;
+    font-size: 25px;
+    border-radius: 10px;
+    border: 2px solid #ffffff;
+}
+
+.buttons, .vigenere-section {
+    margin-bottom: 20px;
+}
+
+.buttons button, .vigenere-section button {
+    padding: 15px 20px;
+    font-size: 16px;
+    margin: 5px;
+    
+    background-color: #000000;
+    color: white;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    white-space: pre-wrap;
+    cursor: pointer;
+}
+
+.buttons button:hover, .vigenere-section button:hover {
+    background-color: #000000;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 顯示淺色覆蓋效果 */
+    transition: background-color 0.2s ease;
+}
+
+.vigenere-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vigenere-section input {
+    padding: 15px;
+    font-size: 16px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+
+body.slide-down {
+    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+}
+
+/* 返回按鈕樣式 */
+.back-button {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* 距離頁面左邊的距離 */
+    padding: 10px 20px;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border:  2px solid #fcfcfc; /* 螢光綠邊框 */;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    
+}
+
+/* 加載自訂字體 */
+@font-face {
+    font-family: 'HliexCipher';
+    src: url('fonts/Helixs-Cipher.otf') format('opentype');
+}
+
+/* 加密字體應用 */
+.encrypted-text {
+    font-family: 'HliexCipher', sans-serif;
+    font-size: 28px;  /* 調整這裡來設置字體大小 */
+}
+

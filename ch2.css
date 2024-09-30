@@ -1,0 +1,87 @@
+body {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column; /* 垂直排列按鈕 */
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    cursor: pointer;
+    top: 20px;
+    left: 20px;
+}
+
+.buttons button {
+    margin-bottom: 15px; /* 每個按鈕之間的間距 */
+    padding: 10px 70px;
+    font-size: 20px;
+    background-color: #000000;
+    color: white;
+    border-color: rgb(255, 255, 255); /* 顯示紅色邊框 */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.buttons button:hover {
+    background-color: grey;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Courier New', Courier, monospace; /* 終端機風格字體 */
+    background-color: #000000; /* 深藍色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease; /* 切換過渡 */
+    transform: translateY(0);
+}
+
+body.slide-down {
+    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+}
+.back-button {
+    
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgb(0, 0, 0);
+}
+
+.dialog-box {
+    width: 70%;
+    height: 80%;
+    border: 2px solid rgb(255, 255, 255);
+    background-color: #ffffff46;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 顯示淺色覆蓋效果 */
+    padding: 20px;
+    overflow-y: auto;
+    margin-left: 20%;
+    margin-right: 15px;
+}
+
+.dialog-box p {
+    font-size: 20px; /* 字體變大 */
+    line-height: 1.5; /* 增加行距 */
+    white-space: pre-wrap;
+}

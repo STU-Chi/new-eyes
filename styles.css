@@ -1,0 +1,150 @@
+/* 全局樣式設定 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
+    color:white;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 輸入框和按鈕容器樣式 */
+.container {
+    text-align: center;
+}
+
+/* 輸入框樣式 */
+#password {
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    background-color: black;
+    outline: none;
+ 
+}
+
+/* 按鈕樣式 */
+#submit {
+    padding: 10px 20px;
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+    transition:  background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+
+}
+
+/* 滑鼠懸停時的樣式 */
+#submit:hover {
+    background-color: darkgray; /* 當滑鼠懸停時，背景顏色改變 */
+    border-color: gray;         /* 邊框顏色也改變 */
+    color: black;  
+
+}
+
+/* 按鈕點擊時變色 */
+#submit:active {
+    background-color: rgb(223, 223, 223);
+    border-color: rgb(235, 235, 235);
+
+}
+
+/* 錯誤樣式 */
+#password.error {
+    border-color: red;
+    background-color: #941414;
+}
+
+/* 左右晃動動畫 */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+
+/* 繼承上一個網頁的樣式，這裡只需要額外的樣式 */
+.text-item {
+    padding: 20px;
+    font-size: 30px;
+    color: white;
+    border: 2px solid transparent; /* 初始無邊框 */
+    position: relative;
+    margin: 10px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 添加 box-shadow 過渡 */
+}
+
+/* 滑鼠懸停樣式 */
+.text-item:hover {
+    border-color: white; /* 懸停時顯示邊框顏色 */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 顯示淺色覆蓋效果 */
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 點擊動畫效果 */
+.text-item.clicked {
+    animation: flash 0.3s ease; /* 點擊時閃爍動畫 */
+}
+
+@keyframes flash {
+    0% { background-color: rgba(255, 255, 255, 0.2); }
+    50% { background-color: rgba(255, 255, 255, 0.4); }
+    100% { background-color: rgba(255, 255, 255, 0.2); }
+}
+
+
+/* 為第二個和第三個頁面實現往上切換過渡效果 */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* 背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease; /* 切換過渡 */
+    transform: translateY(0);
+}
+
+body.slide-up {
+    transform: translateY(-100%); /* 當應用向上過渡類時，頁面向上移出 */
+}
+
+/* 添加錯誤樣式和搖晃動畫 */
+.text-item.error {
+    box-shadow: 0 0 10px rgba(211, 8, 8, 0.5); /* 顯示淺色覆蓋效果 */
+    border-color: red; /* 顯示紅色邊框 */
+    background-color: #941414;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}
+
+
+.text-item.shake {
+    animation: shake 0.5s; /* 搖晃動畫 */
+}
+
+
