@@ -243,19 +243,21 @@ function morsecipher() {
 
 
 function hliexscipher() {
+    
     const textArea = document.getElementById('text-area');
     const text = textArea.value.trim(); // 獲取文本框內容並移除空白字符
     const placeholderText = textArea.getAttribute('placeholder'); // 獲取預設提示文本
     let isEncrypted = textArea.classList.contains('encrypted-text'); // 檢查是否已加密
+    const isNumeric = /^\d+$/.test(text); // 正則表達式檢查是否為純數字
 
-    if (text === "" || text === placeholderText) {
+    if (text === "" || text === placeholderText || isNumeric) {
         return; // 如果文本框是空的，停止執行
     }
 
     if (!isEncrypted) {
         // 加密：應用自訂字體 HelixCipher 並調整字體大小
         textArea.classList.add('encrypted-text'); // 加入使用自訂字體的 class
-        textArea.style.fontSize = '30px';  // 設置加密狀態下的字體大小
+        textArea.style.fontSize = '25px';  // 設置加密狀態下的字體大小
     } else {
         // 解密：恢復默認字體
         textArea.classList.remove('encrypted-text'); // 移除自訂字體的 class
