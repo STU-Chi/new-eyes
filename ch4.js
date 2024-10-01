@@ -266,8 +266,7 @@ function hliexscipher() {
 }
 
 
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener ('DOMContentLoaded', function () {
     document.body.classList.add('fade-in'); // 當頁面加載時應用淡入過渡效果
 
     const backButton = document.getElementById('back-button');

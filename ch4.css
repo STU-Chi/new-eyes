@@ -15,9 +15,10 @@ body, html {
 }
 
 /* 禁用整個頁面的滾動 */
+
 body {
     overflow: hidden; /* 禁用滾動條 */
-}
+} 
 
 .container {
 
@@ -138,7 +139,7 @@ body.slide-down {
 /* 加載自訂字體 */
 @font-face {
     font-family: 'HliexCipher';
-    src: url('fonts/Helixs-Cipher.otf') format('opentype');
+    src: url('fonts/Helixs-Cipher.otf') format ('opentype');
 }
 
 /* 加密字體應用 */
@@ -212,7 +213,7 @@ body.slide-down {
 
     .back-button {
         padding: 20px 30px;
-        top: -630px;
+        top: -560px;
         left: 10px;
     }
 
