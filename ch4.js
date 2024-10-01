@@ -259,12 +259,9 @@ function hliexscipher() {
     } else {
         // 解密：恢復默認字體
         textArea.classList.remove('encrypted-text'); // 移除自訂字體的 class
-        textArea.style.fontSize = '25px'; // 恢復到默認字體大小
+        textArea.style.fontSize = '22px'; // 恢復到默認字體大小
     }
 }
-
-
-
 
 
 
