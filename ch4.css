@@ -139,7 +139,7 @@ body.slide-down {
 /* 加載自訂字體 */
 @font-face {
     font-family: 'HliexCipher';
-    src: url('fonts/Helixs-Cipher.otf') format ('opentype');
+    src: url('fonts/Helixs-Cipher.otf') format('opentype');
 }
 
 /* 加密字體應用 */
@@ -205,6 +205,10 @@ body.slide-down {
         height: 0%;
         width: 100%;
         top: 10px;
+    }
+
+    textarea {
+        font-size: 20px;
     }
 
     body.slide-down {

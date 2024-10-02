@@ -44,6 +44,8 @@ const dialog = [
 
 ];
 
+let isTyping = false; // 用來追蹤是否正在打字
+
 function typeText(textArray, index = 0, letterIndex = 0) {
     if (index < textArray.length) {
         if (letterIndex < textArray[index].length) {
@@ -51,15 +53,23 @@ function typeText(textArray, index = 0, letterIndex = 0) {
             letterIndex++;
             setTimeout(() => typeText(textArray, index, letterIndex), 70);
         } else {
-            dialogTextElement.textContent += "\n"; // Move to next line
-            setTimeout(() => typeText(textArray, index + 1), 500); // Start typing next line
+            dialogTextElement.textContent += "\n"; // 換行
+            setTimeout(() => typeText(textArray, index + 1), 500); // 開始打下一行
         }
+    } else {
+        // 完成打字後重新啟用按鈕
+        displayTextButton.disabled = false;
+        isTyping = false;
     }
 }
 
 displayTextButton.addEventListener('click', () => {
-    dialogTextElement.textContent = ""; // Clear previous text
-    typeText(dialog);
+    if (!isTyping) { // 確保不會重複啟動打字效果
+        dialogTextElement.textContent = ""; // 清除之前的文字
+        isTyping = true; // 設置為打字狀態
+        displayTextButton.disabled = true; // 禁用按鈕直到打字完成
+        typeText(dialog);
+    }
 });
 
 
