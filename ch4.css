@@ -207,8 +207,8 @@ body.slide-down {
         top: 10px;
     }
 
-    textarea {
-        font-size: 20px;
+    .vigenere-section input {
+        font-size: 10px;
     }
 
     body.slide-down {
