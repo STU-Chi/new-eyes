@@ -4,7 +4,7 @@ const displayTextButton = document.getElementById('display-text-btn');
 
 const dialog = [
 
-"Hello 樹德科大電通系 - 黃淳綺 ", 
+"Hello STU 22115103 - 黃淳綺 ", 
 
 "My friend, you have met a terrible, terrible demise. But, uh, you know", 
 
