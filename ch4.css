@@ -145,7 +145,7 @@ body.slide-down {
 /* 加密字體應用 */
 .encrypted-text {
     font-family: 'HliexCipher', sans-serif;
-    font-size: 28px;  /* 調整這裡來設置字體大小 */
+    font-size: 30px;  /* 調整這裡來設置字體大小 */
 }
 
 

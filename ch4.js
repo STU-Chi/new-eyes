@@ -255,7 +255,7 @@ function hliexscipher() {
     if (!isEncrypted) {
         // 加密：應用自訂字體 HelixCipher 並調整字體大小
         textArea.classList.add('encrypted-text'); // 加入使用自訂字體的 class
-        textArea.style.fontSize = '28px';  // 設置加密狀態下的字體大小
+        
     } else {
         // 解密：恢復默認字體
         textArea.classList.remove('encrypted-text'); // 移除自訂字體的 class
