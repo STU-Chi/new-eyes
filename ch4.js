@@ -249,6 +249,8 @@ function hliexscipher() {
     const isNumeric = /^\d+$/.test(text); // 正則表達式檢查是否為純數字
 
     if (text === "" || text === placeholderText || isNumeric) {
+        textArea.classList.remove('encrypted-text'); // 移除加密狀態
+        textArea.style.fontSize = ''; // 確保字體恢復到原大小
         return; // 如果文本框是空的，停止執行
     }
 
@@ -261,6 +263,19 @@ function hliexscipher() {
         textArea.classList.remove('encrypted-text'); // 移除自訂字體的 class
         textArea.style.fontSize = ''; // 恢復到默認字體大小
     }
+
+     // 自動監聽 textarea 的輸入變化，當內容被清空時恢復原狀
+     document.getElementById('text-area').addEventListener('input', () => {
+        const textArea = document.getElementById('text-area');
+        const text = textArea.value.trim();
+        const placeholderText = textArea.getAttribute('placeholder');
+
+        // 如果文本被刪空或是恢復成預設佔位符，移除加密狀態
+        if (text === "" || text === placeholderText) {
+            textArea.classList.remove('encrypted-text');
+            textArea.style.fontSize = ''; // 恢復到默認字體大小
+        }
+    });
 }
 
 

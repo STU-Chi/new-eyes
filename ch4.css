@@ -35,7 +35,7 @@ body {
 
 .container h1,
 .container p {
-    margin-top: -3px;  /* 調整上方的外部邊距 */
+    margin-top: -15px;  /* 調整上方的外部邊距 */
 }
 
 .back-button {
