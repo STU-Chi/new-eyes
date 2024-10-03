@@ -278,6 +278,35 @@ function hliexscipher() {
     });
 }
 
+// 顯示圖片的函數
+const showImageBtn = document.getElementById('show-image-btn');
+const imageModal = document.getElementById('image-modal');
+const closeModalBtn = document.getElementById('close-btn');
+const modalBackground = document.getElementById('modal-background');
+
+showImageBtn.addEventListener('click', () => {
+    imageModal.style.display = 'block';
+    modalBackground.style.display = 'block';
+    setTimeout(() => {
+        imageModal.classList.add('show-image'); // 開始放大動畫
+    }, 10); // 短暫延遲讓 display: block 生效
+});
+
+// 關閉圖片的函數
+closeModalBtn.addEventListener('click', () => {
+    imageModal.classList.remove('show-image'); // 開始縮小動畫
+    setTimeout(() => {
+        modalBackground.style.display = 'none'; // 等動畫結束後隱藏背景
+    }, 300); // 這裡的 300ms 需要和 CSS 的動畫時間相同
+});
+
+// 點擊背景也能關閉圖片
+modalBackground.addEventListener('click', () => {
+    imageModal.classList.remove('show-image'); // 開始縮小動畫
+    setTimeout(() => {
+        modalBackground.style.display = 'none'; // 等動畫結束後隱藏背景
+    }, 300); // 這裡的 300ms 需要和 CSS 的動畫時間相同
+});
 
 document.addEventListener ('DOMContentLoaded', function () {
     document.body.classList.add('fade-in'); // 當頁面加載時應用淡入過渡效果

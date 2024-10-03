@@ -40,11 +40,20 @@
 
         <!-- Vigenere Section -->
         <div class="vigenere-section">
+            <button class="circle-btn" id="show-image-btn">?</button>
             <input type="text" id="vigenere-key" placeholder="Enter Vigenere Key">
             <button onclick="vigenereEncrypt()">Vigenere Encrypt</button>
             <button onclick="vigenereDecrypt()">Vigenere Decrypt</button>
             <button onclick="hliexscipher()">Hliex's cipher</button>
         </div>
+
+        <!-- 圖片顯示區域 -->
+        <div class="modal-background" id="modal-background"></div>
+            <div class="image-modal" id="image-modal">
+            <img src="vigenere-square.png" alt="Vigenere Square">
+            <button class="close-btn" id="close-btn">X</button>
+        </div>
+
     </div>
 
     <script src="ch4.js"></script>
