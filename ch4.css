@@ -43,8 +43,8 @@ body {
     flex-direction: column;
     position: absolute;
     cursor: pointer;
-    top:  23px;
-    left: 20px;
+    top:  10px;
+    left: 10px;
 }
 
 body.slide-down {
