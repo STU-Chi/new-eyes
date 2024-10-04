@@ -5,7 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    align-items: center;
     height: 100vh;
+    margin: 0;
 }
 
 .container {
@@ -54,15 +56,18 @@ body, html {
     transition: transform 0.5s ease; /* 切換過渡 */
     transform: translateY(0);
 }
+
 body {
     overflow: hidden; /* 禁用滾動條 */
 }
 
+
 body.slide-down {
     transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
 }
-.back-button {
 
+.back-button {
+    
     transition: background-color 0.3s ease;
 }
 
@@ -95,7 +100,7 @@ body.slide-down {
     }
 
     .buttons{
-        top: 60px;
+        top: 20px;
         left: 15px;
     }
 
@@ -104,7 +109,7 @@ body.slide-down {
         padding: 13px 52px;
         text-indent: -5px; /* 文字左移 */
         font-size: 23px;
-
+       
     }
 
     /* 直向模式下的樣式調整 */
