@@ -38,25 +38,31 @@ body {
     margin-top: -15px;  /* 調整上方的外部邊距 */
 }
 
+/* 返回按鈕樣式 */
 .back-button {
+    position: absolute;
+    padding: 12px 30px;
     display: flex;
     flex-direction: column;
-    position: absolute;
-    cursor: pointer;
+    font-size: 30px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border:  2px solid #fcfcfc; /* 螢光綠邊框 */;
+    border-radius: 5px;
     top:  10px;
     left: 10px;
-}
-
-body.slide-down {
-    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
-}
-.back-button {
-    
+    cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
     background-color: rgb(0, 0, 0);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    
+}
+
+body.slide-down {
+    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
 }
 
 h1 {
@@ -115,25 +121,6 @@ textarea {
 
 body.slide-down {
     transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
-}
-
-/* 返回按鈕樣式 */
-.back-button {
-    position: absolute;
-    padding: 12px 30px;
-    font-size: 30px;
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    border:  2px solid #fcfcfc; /* 螢光綠邊框 */;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.back-button:hover {
-    background-color: rgb(0, 0, 0);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
-    
 }
 
 /* 小圈圈按鈕 */
