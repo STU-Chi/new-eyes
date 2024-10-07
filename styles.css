@@ -81,7 +81,7 @@ body, html {
 /* 繼承上一個網頁的樣式，這裡只需要額外的樣式 */
 .text-item {
     padding: 20px;
-    font-size: 7vh;
+    font-size: 6vh;
     color: white;
     border: 2px solid transparent; /* 初始無邊框 */
     position: relative;

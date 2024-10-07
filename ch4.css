@@ -28,14 +28,14 @@ body {
 } 
 
 .container {
-
+    max-width: 90vw; /* 使用 viewport 寬度 */
+    margin: 0 auto; /* 讓容器居中 */
     background-color: #000000;
     border-radius: 5px ;
     padding: 3% 2%;  
     box-shadow: 0 0 15px rgb(255, 255, 255);
     text-align: center;
     align-items: center;
-    max-width: 80vw; /* 確保容器不超出螢幕 */
     max-height: 80vh;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@ body {
 }
 
 h1 {
-    font-size: 3vw; /* 響應式字體大小 */
+    font-size: 2em; /* 響應式字體大小 */
     color: #fff;
     margin-bottom: 4vh;
 }
@@ -66,7 +66,6 @@ body.slide-down {
     transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
 }
 .back-button {
-    
     transition: background-color 0.3s ease;
 }
 
@@ -80,7 +79,7 @@ textarea {
     border-radius: 10px;
     border: 2px solid #ffffff;
     resize: none;
-    width: 80%;
+    width: 90%;
     height: 25vh;
     font-size: 2vw;
     
@@ -100,8 +99,8 @@ textarea {
 
 .buttons button, .vigenere-section button {
     padding: 2.3vh 1.3vw;
-    font-size: 1.6vw;
     margin: 6px;
+    font-size: 20px;
     background-color: #000000;
     color: white;
     border: 2px solid #ffffff;
@@ -131,10 +130,6 @@ textarea {
     margin-right: 10px;
 }
 
-
-body.slide-down {
-    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
-}
 
 /* 返回按鈕樣式 */
 .back-button {
@@ -287,63 +282,72 @@ body.slide-down {
 }
 
 /* 手機裝置 */
-@media only screen and (max-width: 760px) {
-
-    body {
-      
-        box-sizing: border-box;
-        overflow-x: hidden; /* 禁止橫向滾動，防止溢出 */
-        height: 0%;
-        width: 100%;
-        top: 10px;
-    }
+@media only screen and (max-width: 780px) {
 
     .vigenere-section input {
-        font-size: 10px;
+        font-size: 13px;
+        padding: 12px;
     }
 
-    body.slide-down {
-        transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+    .container h1, .container p {
+        margin-bottom: 2vh;
     }
 
     .back-button {
-        padding: 20px 30px;
-        top: -560px;
+        padding: 10px 20px;
         left: 10px;
+        margin-top: 2vh;
     }
 
     .container {
-        padding: 170px 30px;
-     
+        padding: 5%;
+        max-height: 70vh;
     }
 
-    .container h1,
-    .container p {
-        margin-top: -70px;  /* 調整上方的外部邊距 */
+    .button-container {
+        display: flex;
+        flex-direction: row; /* 橫向排列 */
+        flex-wrap: wrap; /* 允許按鈕自動換行 */
+        justify-content: space-evenly; /* 讓按鈕均勻分布 */
+        gap: 1vw;
     }
 
     .buttons {
-        display: flex;
+        flex-direction: row; /* 橫向排列 */
         flex-wrap: wrap;  /* 讓按鈕在空間不足時自動換行 */
         align-items: center;
-        justify-content: center;  /* 水平居中對齊按鈕 */
-        gap: 20px;  /* 控制按鈕之間的間距 */
-        box-sizing: border-box;
+        justify-content: center; /* 讓按鈕均勻分布 */
+        gap: 1vw;
     }
+    
 
     .buttons button {
         padding: 15px 30px;
-        font-size: 18px;
-        
         border-radius: 5px;
-        margin: 5px 0; /* 直向排列時的間距 */
+        margin: 5px ; /* 直向排列時的間距 */
         cursor: pointer;
     }
 
     .buttons button, .vigenere-section button {
-        padding: 12px 18px;
-      
+        padding: 12px 10px;
+        font-size: 15px;
     }
+
+    textarea {
+     height: 11vh;
+     font-size: 15px;
+     margin: 10px;
+    }
+
+    .vigenere-section {
+        flex-direction: row; /* 橫向排列 */
+        flex-wrap: wrap;  /* 讓按鈕在空間不足時自動換行 */
+        justify-content: center;
+        gap: 1vw;
+        align-items: center;
+    }
+
+    
 
     @media only screen and (orientation: portrait) {
      .container { 
@@ -356,7 +360,7 @@ body.slide-down {
         }
 
     .buttons button {
-             margin: 0 10px; /* 橫向排列時的間距 */
+        margin-top: 10px; /* 橫向排列時的間距 */
          }
     }
 
