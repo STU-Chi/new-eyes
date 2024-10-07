@@ -255,7 +255,7 @@ function hliexscipher() {
     }
 
     if (!isEncrypted) {
-        // 加密：應用自訂字體 HelixCipher 並調整字體大小
+        // 加密：應用自訂字體 HelixCipher 
         textArea.classList.add('encrypted-text'); // 加入使用自訂字體的 class
         
     } else {
@@ -307,6 +307,8 @@ modalBackground.addEventListener('click', () => {
         modalBackground.style.display = 'none'; // 等動畫結束後隱藏背景
     }, 300); // 這裡的 300ms 需要和 CSS 的動畫時間相同
 });
+
+
 
 document.addEventListener ('DOMContentLoaded', function () {
     document.body.classList.add('fade-in'); // 當頁面加載時應用淡入過渡效果

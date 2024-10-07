@@ -81,11 +81,11 @@ body, html {
 /* 繼承上一個網頁的樣式，這裡只需要額外的樣式 */
 .text-item {
     padding: 20px;
-    font-size: 30px;
+    font-size: 7vh;
     color: white;
     border: 2px solid transparent; /* 初始無邊框 */
     position: relative;
-    margin: 10px;
+    margin: 12px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 添加 box-shadow 過渡 */
 }
 
@@ -114,7 +114,6 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: Arial, sans-serif;
     background-color: #000000; /* 背景 */
     display: flex;
     justify-content: center;
