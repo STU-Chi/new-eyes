@@ -276,7 +276,7 @@ textarea {
         align-items: center;
         height: 80vh; /* 確保容器不壓縮 */
         padding: 2% 5%;
-        max-height: 80vh;
+        max-height: 78vh;
         margin-top: 15vh;
     }
 
@@ -331,7 +331,7 @@ textarea {
      overflow-y: auto; /* 啟用垂直滾動條，防止溢出 */
      height: 11vh;
      font-size: 15px;
-     margin-bottom: 1.5vh; /* 控制 textarea 與按鈕之間的距離 */
+     margin-bottom: 1vh; /* 控制 textarea 與按鈕之間的距離 */
      flex-grow: 0; /* 確保 textarea 不會被壓縮 */
     }
 

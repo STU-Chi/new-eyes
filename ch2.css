@@ -129,7 +129,7 @@ body.slide-down {
 }
 
 /* 平板裝置：針對中等大小螢幕進行調整 */
-@media only screen and (min-width:791px) and (max-width: 1024px) {
+@media only screen and (min-width:769px) and (max-width: 1024px) {
 
     .dialog-text {
         padding: 40px;
@@ -146,11 +146,13 @@ body.slide-down {
         padding: 13px 52px;
         text-indent: -5px; /* 文字左移 */
         font-size: 23px;
-       
     }
-}
 
+    .dialog-box {
+        margin-left: 26%;
+        margin-right: 2%;
+    }
     
-
+}
 
 
