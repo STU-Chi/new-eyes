@@ -272,11 +272,12 @@ textarea {
     .container {
         justify-content: flex-start; /* 將內容靠近頂部排列 */
         padding-top: 2vh; /* 距離頂部一定距離，具體數值可以調整 */
+        justify-content: space-between; /* 保持內容間的間距 */
         align-items: center;
         height: 80vh; /* 確保容器不壓縮 */
         padding: 2% 5%;
-        max-height: 78vh;
-        margin-top: 13vh;
+        max-height: 75vh;
+        margin-top: 11vh;
     }
 
     .button-container {
