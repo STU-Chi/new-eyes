@@ -266,7 +266,7 @@ textarea {
     }
 
     .encrypted-text {
-        font-size: 15px;  /* 調整這裡來設置字體大小 */
+        font-size: 20px;  /* 調整這裡來設置字體大小 */
     }
 
     .container {
@@ -286,8 +286,8 @@ textarea {
     }
 
     .close-btn {
-        right: 30px;
-        font-size: 20px;
+        right: 40px;
+        font-size: 15px;
     }
 
     input#vigenere-key {
