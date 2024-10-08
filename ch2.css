@@ -111,7 +111,7 @@ body.slide-down {
     .buttons button {
      margin: 0 10px; /* 橫向排列時的間距 */
      font-size: 16px;
-     padding: 5px 30px;
+     padding: 1vh 10vw;
      border-radius: 8px;
     }
 

@@ -266,7 +266,7 @@ textarea {
     }
 
     .encrypted-text {
-        font-size: 20px;  /* 調整這裡來設置字體大小 */
+        font-size: 25px;  /* 調整這裡來設置字體大小 */
     }
 
     .container {
@@ -323,7 +323,7 @@ textarea {
     }
 
     textarea {
-     padding: 6px 13px;
+     padding: 6px 8px;
      vertical-align: top; /* 垂直方向頂對齊 */
      overflow-y: auto; /* 啟用垂直滾動條，防止溢出 */
      height: 11vh;
@@ -355,12 +355,9 @@ textarea {
         margin-top: -4px;  /* 調整上方的外部邊距 */
         }
 
-        h1 {
-            font-size: 28px;
-        }
 
         .back-button {
-            top: 10px;
+            top: 60px;
             left: 10px;
         }
 
