@@ -272,8 +272,11 @@ textarea {
     .container {
         justify-content: flex-start; /* 將內容靠近頂部排列 */
         padding-top: 2vh; /* 距離頂部一定距離，具體數值可以調整 */
-        padding: 5%;
-        max-height: 75vh;
+        justify-content: space-between; /* 保持內容間的間距 */
+        align-items: center;
+        height: 80vh; /* 確保容器不壓縮 */
+        padding: 2% 5%;
+        max-height: 80vh;
         margin-top: 15vh;
     }
 
@@ -291,7 +294,7 @@ textarea {
     }
 
     input#vigenere-key {
-        padding: 10px 1px;
+        padding: 10px 3px;
     }
 
     .buttons, .vigenere-section {
@@ -310,16 +313,16 @@ textarea {
     
 
     .buttons button {
-        flex: 1 0 10%; /* 確保每行顯示三個按鈕，並自動調整寬度 */
-        padding: 2vh 1.3vw;
-        border-radius: 5px;
-        margin: 5px ; /* 直向排列時的間距 */
-        cursor: pointer;
+      flex: 1 0 10%; /* 確保每行顯示三個按鈕，並自動調整寬度 */
+      padding: 2vh 1.3vw;
+      border-radius: 5px;
+      margin: 5px ; /* 直向排列時的間距 */
+      cursor: pointer;
     }
 
     .buttons button, .vigenere-section button {
-        padding: 1vh 3vw;
-        font-size: 13px;
+       padding: 1vh 3vw;
+       font-size: 13px;
     }
 
     textarea {
@@ -329,16 +332,15 @@ textarea {
      height: 11vh;
      font-size: 15px;
      margin-bottom: 1.5vh; /* 控制 textarea 與按鈕之間的距離 */
-    flex-grow: 0; /* 確保 textarea 不會被壓縮 */
+     flex-grow: 0; /* 確保 textarea 不會被壓縮 */
     }
 
     .vigenere-section {
-        flex: 1 1 30%;
         flex-direction: row; /* 橫向排列 */
         flex-wrap: wrap;  /* 讓按鈕在空間不足時自動換行 */
         justify-content: center;
-        gap: 1vw;
         align-items: center;
+        margin-top: 10px;
     }
 }
 
