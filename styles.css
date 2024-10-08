@@ -148,7 +148,7 @@ body.slide-up {
 
 
 /* 手機板 */
-@media only screen and (max-width: 790px) {
+@media only screen and (max-width: 768px) {
 
     body, html{
      font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
@@ -156,7 +156,7 @@ body.slide-up {
     }
 
     h1 {
-        font-size: 25px;
+      font-size: 25px;
     }
 
     #password {
@@ -172,5 +172,15 @@ body.slide-up {
      padding: 10px 15px;
      font-size: 16px;
     }
+
+}
+
+@media only screen and (min-width: 769px) and (max-width:1024px) {
+
+    body, html{
+        font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
+        letter-spacing: 0.2em
+       }
+   
 
 }
