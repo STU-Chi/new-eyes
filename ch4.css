@@ -281,6 +281,10 @@ textarea {
         gap: 1vh;
     }
 
+    .close-btn {
+        right: 30px;
+        font-size: 20px;
+    }
 
     input#vigenere-key {
         padding: 10px 1px;
