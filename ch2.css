@@ -60,11 +60,9 @@ body {
     overflow: hidden; /* 禁用滾動條 */
 }
 
-
 body.slide-down {
     transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
 }
-
 .back-button {
     
     transition: background-color 0.3s ease;
@@ -91,15 +89,53 @@ body.slide-down {
     white-space: pre-wrap;
 }
 
+/* 手機板 */
+@media only screen and (max-width: 768px) {
+
+    body, html{
+     overflow: hidden; /* 禁用滾動條 */
+    }
+
+    .dialog-box p {
+     font-size: 18px;
+     margin-top: -10px;
+    
+    }
+
+    .buttons {
+     flex-direction: row; /* 橫向排列 */
+     margin-left: -15px;
+     top: 40px;
+    }
+
+    .buttons button {
+     margin: 0 10px; /* 橫向排列時的間距 */
+     font-size: 21px;
+     padding: 8px 40px;
+     border-radius: 8px;
+    }
+
+    .dialog-box {
+     width: 80%;
+     height: 75%;
+     padding: 20px;
+     margin-left: 1%;
+     font-size: 10px;
+     margin-bottom: 10px;
+     transform: translateY(65px); /* 調整向下移動的距離 */
+    }
+}
+
 /* 平板裝置：針對中等大小螢幕進行調整 */
-@media only screen and (min-width: 600px) and (max-width: 1024px) {
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+
     .dialog-text {
         padding: 40px;
         width: 85%;
     }
 
     .buttons{
-        top: 20px;
+        top: 60px;
         left: 15px;
     }
 
@@ -110,26 +146,9 @@ body.slide-down {
         font-size: 23px;
        
     }
-
-    /* 直向模式下的樣式調整 */
-    @media only screen and (orientation: portrait) {
-
-        .buttons {
-            flex-direction: row; /* 橫向排列 *//
-        }
-
-        .buttons button {
-            margin: 0 10px; /* 橫向排列時的間距 */
-            font-size: 25px;
-        }
-
-        .dialog-box {
-            width: 80%;
-            height: 80%;
-            padding: 20px;
-            margin-left:3%;
-            transform: translateY(65px); /* 調整向下移動的距離 */
-        }
-    }
-
 }
+
+    
+
+
+
