@@ -97,8 +97,8 @@ body.slide-down {
     }
 
     .dialog-box p {
-     font-size: 18px;
-     margin-top: -10px;
+     font-size: 14px;
+     margin-top: -3px;
     
     }
 
@@ -110,24 +110,26 @@ body.slide-down {
 
     .buttons button {
      margin: 0 10px; /* 橫向排列時的間距 */
-     font-size: 21px;
-     padding: 8px 40px;
+     font-size: 16px;
+     padding: 5px 30px;
      border-radius: 8px;
     }
 
     .dialog-box {
-     width: 80%;
-     height: 75%;
-     padding: 20px;
-     margin-left: 1%;
-     font-size: 10px;
-     margin-bottom: 10px;
-     transform: translateY(65px); /* 調整向下移動的距離 */
+      width: 90%;
+      height: 72%;
+      padding: 10px;
+      margin-left: 1%;
+      margin-right: 1%;
+      margin-top: 10px;
+      font-size: 10px;
+      margin-bottom: 10px;
+      transform: translateY(50px);
     }
 }
 
 /* 平板裝置：針對中等大小螢幕進行調整 */
-@media only screen and (min-width:769px) and (max-width: 1024px) {
+@media only screen and (min-width:791px) and (max-width: 1024px) {
 
     .dialog-text {
         padding: 40px;

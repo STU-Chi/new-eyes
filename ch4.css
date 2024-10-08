@@ -238,6 +238,16 @@ textarea {
 /* 手機裝置 */
 @media only screen and (max-width: 768px) {
 
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        height: 100vh;
+        overflow: hidden; /* 禁用滾動條 */
+    } 
+
     .vigenere-section input {
         font-size: 13px;
         padding: 12px;
@@ -245,56 +255,77 @@ textarea {
 
     .container h1, .container p {
         margin-bottom: 1vh;
+        font-size: 8vw;
     }
 
     .back-button {
-        padding: 10px 20px;
-        left: 10px;
-        margin-top: 2vh;
+        padding: 1vh 4vw;
+        font-size: 8vw;
+        left: 5px;
+        margin-top: 5vh;
     }
 
     .container {
+        justify-content: flex-start; /* 將內容靠近頂部排列 */
+        padding-top: 2vh; /* 距離頂部一定距離，具體數值可以調整 */
         padding: 5%;
         max-height: 75vh;
-        margin-top: 8vh;
+        margin-top: 15vh;
     }
 
     .button-container {
         display: flex;
         flex-direction: row; /* 橫向排列 */
         flex-wrap: wrap; /* 允許按鈕自動換行 */
-        justify-content: space-evenly; /* 讓按鈕均勻分布 */
-        gap: 1vw;
+        margin-top: auto; /* 確保按鈕區域下移但不影響上方的區域 */
+        gap: 1vh;
+    }
+
+
+    input#vigenere-key {
+        padding: 10px 1px;
+    }
+
+    .buttons, .vigenere-section {
+        margin-bottom: 0vh;
     }
 
     .buttons {
+        display: flex;
         flex-direction: row; /* 橫向排列 */
         flex-wrap: wrap;  /* 讓按鈕在空間不足時自動換行 */
         align-items: center;
         justify-content: center; /* 讓按鈕均勻分布 */
         gap: 1vw;
+        margin-bottom: 0;
     }
     
 
     .buttons button {
-        padding: 15px 30px;
+        flex: 1 0 10%; /* 確保每行顯示三個按鈕，並自動調整寬度 */
+        padding: 2vh 1.3vw;
         border-radius: 5px;
         margin: 5px ; /* 直向排列時的間距 */
         cursor: pointer;
     }
 
     .buttons button, .vigenere-section button {
-        padding: 12px 10px;
-        font-size: 15px;
+        padding: 1vh 3vw;
+        font-size: 13px;
     }
 
     textarea {
+     padding: 6px 13px;
+     vertical-align: top; /* 垂直方向頂對齊 */
+     overflow-y: auto; /* 啟用垂直滾動條，防止溢出 */
      height: 11vh;
      font-size: 15px;
-     margin: 10px;
+     margin-bottom: 1.5vh; /* 控制 textarea 與按鈕之間的距離 */
+    flex-grow: 0; /* 確保 textarea 不會被壓縮 */
     }
 
     .vigenere-section {
+        flex: 1 1 30%;
         flex-direction: row; /* 橫向排列 */
         flex-wrap: wrap;  /* 讓按鈕在空間不足時自動換行 */
         justify-content: center;

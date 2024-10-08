@@ -148,7 +148,7 @@ body.slide-up {
 
 
 /* 手機板 */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 790px) {
 
     body, html{
      font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
