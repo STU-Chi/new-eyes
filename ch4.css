@@ -265,6 +265,10 @@ textarea {
         margin-top: 5vh;
     }
 
+    .encrypted-text {
+        font-size: 15px;  /* 調整這裡來設置字體大小 */
+    }
+
     .container {
         justify-content: flex-start; /* 將內容靠近頂部排列 */
         padding-top: 2vh; /* 距離頂部一定距離，具體數值可以調整 */
