@@ -236,7 +236,7 @@ textarea {
 
 
 /* 平板裝置：針對中等大小螢幕進行調整 */
-@media only screen and (min-width: 780px) and (max-width: 1050px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
         padding: 13px 52px; /* 上下和左右內邊距 */
         width: 80%;
@@ -282,7 +282,7 @@ textarea {
 }
 
 /* 手機裝置 */
-@media only screen and (max-width: 780px) {
+@media only screen and (max-width: 768px) {
 
     .vigenere-section input {
         font-size: 13px;
@@ -290,7 +290,7 @@ textarea {
     }
 
     .container h1, .container p {
-        margin-bottom: 2vh;
+        margin-bottom: 1vh;
     }
 
     .back-button {
@@ -301,7 +301,8 @@ textarea {
 
     .container {
         padding: 5%;
-        max-height: 70vh;
+        max-height: 75vh;
+        margin-top: 8vh;
     }
 
     .button-container {
@@ -348,8 +349,8 @@ textarea {
     }
 
     
-
-    @media only screen and (orientation: portrait) {
+    /*大螢幕*/
+    @media only screen and (min-width:1025px) {
      .container { 
              max-width: 95%;   /* 調整寬度，確保不會溢出 */
         }

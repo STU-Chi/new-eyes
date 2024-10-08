@@ -146,3 +146,22 @@ body.slide-up {
     animation: shake 0.5s; /* 搖晃動畫 */
 }
 
+
+ /* 手機板 */
+ @media only screen and (max-width: 768px) {
+
+    body, html{
+        font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
+    }
+
+    #password {
+        padding: 12px 10px;
+        font-size: 16px;
+        margin-left: 10px;
+    }
+
+    #submit {
+        margin-right: 10px;
+    }
+
+    }
