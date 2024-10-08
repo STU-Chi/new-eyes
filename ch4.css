@@ -277,7 +277,7 @@ textarea {
         height: 80vh; /* 確保容器不壓縮 */
         padding: 2% 5%;
         max-height: 75vh;
-        margin-top: 11vh;
+        margin-top: 9vh;
     }
 
     .button-container {

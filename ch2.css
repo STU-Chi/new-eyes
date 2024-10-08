@@ -104,7 +104,7 @@ body.slide-down {
 
     .buttons {
      flex-direction: row; /* 橫向排列 */
-     top: 23px;
+     top: 15px;
      left: 0px;
     }
 
@@ -117,14 +117,14 @@ body.slide-down {
 
     .dialog-box {
      width: 90%;
-     height: 76%;
+     height: 77%;
      padding: 10px;
      margin-left: 1%;
      margin-right: 1%;
      margin-top: 10px;
      font-size: 10px;
      margin-bottom: 10px;
-     transform: translateY(42px);
+     transform: translateY(40px);
     }
 }
 
