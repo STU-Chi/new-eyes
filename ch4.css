@@ -266,13 +266,12 @@ textarea {
     }
 
     .encrypted-text {
-        font-size: 25px;  /* 調整這裡來設置字體大小 */
+        font-size: 22px;  /* 調整這裡來設置字體大小 */
     }
 
     .container {
         justify-content: flex-start; /* 將內容靠近頂部排列 */
         padding-top: 2vh; /* 距離頂部一定距離，具體數值可以調整 */
-        justify-content: space-between; /* 保持內容間的間距 */
         align-items: center;
         height: 80vh; /* 確保容器不壓縮 */
         padding: 2% 5%;
