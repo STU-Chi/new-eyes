@@ -87,6 +87,7 @@ body, html {
     position: relative;
     margin: 12px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 添加 box-shadow 過渡 */
+    margin-bottom: 2.5vh;
 }
 
 /* 滑鼠懸停樣式 */
