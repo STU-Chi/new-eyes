@@ -19,20 +19,24 @@ body, html {
 
 /* 輸入框樣式 */
 #password {
-    padding: 10px;
-    font-size: 18px;
+    padding: 1vh 1.5vw;
+    max-width: 50%;
+    font-size: 3vw;
     border: 2px solid white;
     border-radius: 5px;
     color: white;
     background-color: black;
     outline: none;
- 
+}
+
+h1 {
+    font-size: 3.5vw;
 }
 
 /* 按鈕樣式 */
 #submit {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 1.5vh 3vw;
+    font-size: 2vw;
     border: 2px solid white;
     border-radius: 5px;
     background-color: black;
