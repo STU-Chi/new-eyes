@@ -4,7 +4,7 @@ const displayTextButton = document.getElementById('display-text-btn');
 
 const dialog = [
 
-"Hello STU 22115103 - 黃淳綺 ", 
+"Hello STU 22115103 - Hliex ", 
 
 "My friend, you have met a terrible, terrible demise. But, uh, you know", 
 
