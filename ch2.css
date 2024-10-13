@@ -27,8 +27,8 @@ body {
 }
 
 .buttons button {
-    margin-bottom: 20px; /* 每個按鈕之間的間距 */
-    padding: 15px 6vw;
+    margin-bottom: 15px; /* 每個按鈕之間的間距 */
+    padding: 15px 90px;
     font-size: 23px;
     background-color: #000000;
     color: white;
@@ -80,8 +80,7 @@ body.slide-down {
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 顯示淺色覆蓋效果 */
     padding: 20px;
     overflow-y: auto;
-    margin-left: 23%;
-    margin-right: 1%;
+    margin-left: 22%;
 }
 
 .dialog-box p {
@@ -144,7 +143,7 @@ body.slide-down {
 
     .buttons button {
         display: inline-block; /* 使按鈕能夠設定寬度 */
-        padding: 1.5vh 7vw;
+        padding: 13px 52px;
         text-indent: -5px; /* 文字左移 */
         font-size: 23px;
     }

@@ -19,24 +19,20 @@ body, html {
 
 /* 輸入框樣式 */
 #password {
-    padding: 1.5vh 1.5vw;
-    max-width: 50%;
-    font-size: 2vw;
+    padding: 10px;
+    font-size: 18px;
     border: 2px solid white;
     border-radius: 5px;
     color: white;
     background-color: black;
     outline: none;
+ 
 }
-
-h1 {
-    font-size: 3vw;
-    }
 
 /* 按鈕樣式 */
 #submit {
-    padding: 1.5vh 2vw;
-    font-size: 2vw;
+    padding: 10px 20px;
+    font-size: 18px;
     border: 2px solid white;
     border-radius: 5px;
     background-color: black;
@@ -91,7 +87,6 @@ h1 {
     position: relative;
     margin: 12px;
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 添加 box-shadow 過渡 */
-    margin-bottom: 2.5vh;
 }
 
 /* 滑鼠懸停樣式 */
@@ -167,8 +162,8 @@ body.slide-up {
     #password {
      padding: 10px 10px;
      font-size: 16px;
-     margin-left: 10px;
-     width: 120px;
+     margin-left: 5px;
+     width: 130px;
     }
 
     #submit {

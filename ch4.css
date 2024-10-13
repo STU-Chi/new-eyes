@@ -234,6 +234,11 @@ textarea {
     font-size: 30px;  /* 調整這裡來設置字體大小 */
 }
 
+body.slide-down {
+    transform: translateY(100%);
+    transition: transform 0.5s ease;
+}
+
 
 /* 手機裝置 */
 @media only screen and (max-width: 768px) {
@@ -266,7 +271,7 @@ textarea {
     }
 
     .encrypted-text {
-        font-size: 20px;  /* 調整這裡來設置字體大小 */
+        font-size: 22px;  /* 調整這裡來設置字體大小 */
     }
 
     .container {
