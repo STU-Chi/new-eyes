@@ -231,7 +231,7 @@ textarea {
 /* 加密字體應用 */
 .encrypted-text {
     font-family: 'HliexCipher', sans-serif;
-    font-size: 30px;  /* 調整這裡來設置字體大小 */
+    font-size: 2.2vw;  /* 調整這裡來設置字體大小 */
 }
 
 body.slide-down {

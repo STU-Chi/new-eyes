@@ -85,7 +85,7 @@ body, html {
     color: white;
     border: 2px solid transparent; /* 初始無邊框 */
     position: relative;
-    margin: 12px;
+    margin: 2.2vh;
     transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 添加 box-shadow 過渡 */
 }
 

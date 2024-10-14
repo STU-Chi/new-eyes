@@ -105,17 +105,25 @@ function binaryToText(binary) {
 function binarycipher() {
     let inputText = document.getElementById('text-area').value.trim();
 
-    if (isBinary(inputText)) {
+    // 只對允許的字符（英文字母、數字和空格）進行加密
+    let validText = filterValidCharacters(inputText);
+
+    if (isBinary(validText)) {
         // 如果是二進位，執行解密
-        let decryptedText = binaryToText(inputText);
+        let decryptedText = binaryToText(validText);
         document.getElementById('text-area').value = decryptedText;
     } else {
         // 否則執行加密
-        let encryptedBinary = textToBinary(inputText);
+        let encryptedBinary = textToBinary(validText);
         document.getElementById('text-area').value = encryptedBinary;
     }
 }
 
+// 過濾非英文字母、數字或空格的字符
+function filterValidCharacters(text) {
+    // 只允許 a-z、A-Z、0-9 和空格
+    return text.replace(/[^a-zA-Z0-9 ]/g, '');
+}
 
 // 檢查金鑰是否有效
 function validateKey(key) {
@@ -241,42 +249,46 @@ function morsecipher() {
 }
 
 function hliexscipher() {
-    
     const textArea = document.getElementById('text-area');
     const text = textArea.value.trim(); // 獲取文本框內容並移除空白字符
     const placeholderText = textArea.getAttribute('placeholder'); // 獲取預設提示文本
     let isEncrypted = textArea.classList.contains('encrypted-text'); // 檢查是否已加密
-    const isNumeric = /^\d+$/.test(text); // 正則表達式檢查是否為純數字
 
-    if (text === "" || text === placeholderText || isNumeric) {
+    // 過濾非英文字母、數字和空格的字符（保留英文字母、數字和空格）
+    const validText = filterValidCharacters(text);
+
+    // 如果文本框是空的、為佔位符，或只含數字，停止加密/解密
+    if (validText === "" || validText === placeholderText) {
         textArea.classList.remove('encrypted-text'); // 移除加密狀態
-        textArea.style.fontSize = ''; // 確保字體恢復到原大小
-        return; // 如果文本框是空的，停止執行
+        textArea.style.fontSize = ''; // 恢復字體到原大小
+        return; // 停止執行
     }
 
     if (!isEncrypted) {
         // 加密：應用自訂字體 HelixCipher 
         textArea.classList.add('encrypted-text'); // 加入使用自訂字體的 class
-        
     } else {
         // 解密：恢復默認字體
         textArea.classList.remove('encrypted-text'); // 移除自訂字體的 class
-        textArea.style.fontSize = ''; // 恢復到默認字體大小
+        textArea.style.fontSize = ''; // 恢復字體大小
     }
 
-     // 自動監聽 textarea 的輸入變化，當內容被清空時恢復原狀
-     document.getElementById('text-area').addEventListener('input', () => {
-        const textArea = document.getElementById('text-area');
-        const text = textArea.value.trim();
-        const placeholderText = textArea.getAttribute('placeholder');
-
-        // 如果文本被刪空或是恢復成預設佔位符，移除加密狀態
-        if (text === "" || text === placeholderText) {
+    // 監聽 textarea 的輸入變化，當內容被清空或恢復成預設佔位符時，移除加密狀態
+    textArea.addEventListener('input', () => {
+        const updatedText = textArea.value.trim();
+        if (updatedText === "" || updatedText === placeholderText) {
             textArea.classList.remove('encrypted-text');
             textArea.style.fontSize = ''; // 恢復到默認字體大小
         }
     });
 }
+
+// 過濾非英文字母、數字和空格的字符
+function filterValidCharacters(text) {
+    // 只允許 a-z、A-Z、0-9 和空格，過濾掉其他字符（例如中文）
+    return text.replace(/[^a-zA-Z ]/g, '');
+}
+
 
 // 顯示圖片的函數
 const showImageBtn = document.getElementById('show-image-btn');
@@ -310,17 +322,26 @@ modalBackground.addEventListener('click', () => {
 
 
 
-document.addEventListener ('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('fade-in'); // 當頁面加載時應用淡入過渡效果
 
     const backButton = document.getElementById('back-button');
 
-    if (backButton) {
-        backButton.addEventListener('click', function () {
-            document.body.classList.add('slide-down'); // 添加向下切換過渡效果
-            setTimeout(() => {
-                window.location.href = 'CH.html'; // 返回到第二個網頁
-            }, 500); // 等待過渡完成後再重定向
-        });
+    // 定義返回函式，應用動畫並返回上一頁
+    function handleBackNavigation() {
+        document.body.classList.add('slide-down'); // 添加向下切換過渡效果
+        setTimeout(() => {
+            window.location.href = 'CH.html'; // 重定向到你的目標頁面
+        }, 500); // 等待過渡完成後再重定向
     }
+
+    // 綁定 back 按鈕點擊事件
+    if (backButton) {
+        backButton.addEventListener('click', handleBackNavigation);
+    }
+
+    // 監聽瀏覽器的退回事件
+    window.addEventListener('popstate', function () {
+        handleBackNavigation(); // 執行與 back 按鈕相同的退場動畫
+    });
 });
