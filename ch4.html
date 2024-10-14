@@ -1,61 +1,75 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Text Encryption Translator</title>
-    <link rel="stylesheet" href="ch4.css">
+    <title>chapter</title>
+    <link rel="stylesheet" href="ch.css">
 </head>
 <body>
-    
     <div class="container">
-        <h1>Text Encryption Translator</h1>
-         <button id="back-button" class="back-button">Back</button>
-
-         <style>
-
-         .buttons button:hover, .vigenere-section button:hover {
-              background-color: #f5f5f580;
-             
-        }
-             /* 按鈕在滑鼠懸停時的效果 */
-         .back-button:hover {
-            background-color: #ffffffa2; /* 背景變成螢光綠 */
-        
-        }
-        </style>
-
-        <!-- Single Input/Output Text Area -->
-        <textarea id="text-area" placeholder="Enter text or see output here"></textarea>
-
-        <!-- Encryption Buttons -->
-        <div class="buttons">
-            <button onclick="caesarCipher(-3)">Caesar -3</button>
-            <button onclick="caesarCipher(3)">Caesar +3</button>
-            <button onclick="atbashcipher()">Atbash cipher</button>
-            <button onclick="a1z26Cipher()">A1Z26</button>
-            <button onclick="binarycipher()">Binary cipher</button>
-            <button onclick="morsecipher()">Morse cipher</button>
-        </div>
-
-        <!-- Vigenere Section -->
-        <div class="vigenere-section">
-            <button class="circle-btn" id="show-image-btn">?</button>
-            <input type="text" id="vigenere-key" placeholder="Enter Vigenere Key">
-            <button onclick="vigenereEncrypt()">Vigenere Encrypt</button>
-            <button onclick="vigenereDecrypt()">Vigenere Decrypt</button>
-            <button onclick="hliexscipher()">Hliex's cipher</button>
-        </div>
-
-        <!-- 圖片顯示區域 -->
-        <div class="modal-background" id="modal-background"></div>
-            <div class="image-modal" id="image-modal">
-            <img src="vigenere-square.png" alt="Vigenere Square">
-            <button class="close-btn" id="close-btn">X</button>
-        </div>
-
+        <button id="back-button" class="back-button">Back</button>
+        <h1>Whatch  your step!</h1>
     </div>
+    <script src="ch.js"></script>
 
-    <script src="ch4.js"></script>
+    <style>
+        /* 設定網頁的背景色及字體 */
+        body {
+            background-color: #000000; /* 深綠色背景 */
+            font-family: 'Courier New', Courier, monospace; /* 終端機風格字體 */
+            color: #ec5701; /* 螢光綠字體顏色 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* 使頁面充滿整個視窗 */
+            margin: 0;
+        }
+
+        /* 中央容器 */
+        .container {
+            text-align: center;
+        }
+
+        /* 標題文字的設計 */
+        h1 {
+            font-size: 35px;
+            top: 20px; /* 距離頁面頂部的距離 */
+            margin-bottom: 20px; /* 標題與輸入框之間的距離 */
+        }
+
+        /* 輸入框的設計 */
+        input[type="password"] {
+            font-size: 18px;
+            padding: 10px;
+            border: 2px solid #ffffff; /* 螢光綠邊框 */
+            background-color: #000000; /* 黑色背景 */
+            color: #fa5a10; /* 螢光綠字體 */
+            width: 300px; /* 輸入框寬度 */
+            text-align: center;
+        }
+
+
+        /* Back按鈕的設計 */
+        .back-button {
+            position: absolute;
+            top: 20px; /* 距離頁面頂部的距離 */
+            left: 20px; /* 距離頁面左邊的距離 */
+            padding: 10px 20px;
+            border: 2px solid #fcfcfc; /* 螢光綠邊框 */
+            color: #ffffff; /* 螢光綠字體 */
+            background-color: #000000; /* 黑色背景 */
+            text-decoration: none;
+            font-size: 30px;
+        }
+
+        /* 按鈕在滑鼠懸停時的效果 */
+        .back-button:hover {
+            border: 2px solid #000000; /* 螢光綠邊框 */
+            background-color: #ffffff; /* 背景變成螢光綠 */
+            color: #000000; /* 字體變成深綠色 */
+        }
+    </style>
+    </head>
+  
 </body>
 </html>

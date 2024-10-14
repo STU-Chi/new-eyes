@@ -57,4 +57,37 @@ body.slide-down {
     src: url('fonts/MURDERER.TTF') format('truetype'); /* 字體文件路徑及格式 */
 }
 
+/* 手機裝置 */
+@media only screen and (max-width: 768px) {
 
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        height: 100vh;
+        overflow: hidden; /* 禁用滾動條 */
+    } 
+
+    /* 中央容器 */
+     .container {
+        text-align: center;
+        margin: 5px;
+    }
+
+    .back-button {
+        padding: 1vh 4vw;
+        font-size: 8vw;
+        left: 5px;
+        margin-top: 5vh;
+    }
+
+    h1 {
+        font-size: 7vh;
+        letter-spacing: 0.3em;
+        margin: 2vh;
+        border: 5px solid transparent;
+        margin-right: 5px;
+    }
+}
