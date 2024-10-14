@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     textItems.forEach(item => {
         item.addEventListener('click', function () {
-            if (this.id === 'ch3') {
+            if (this.id === 'ch4') {
                 this.classList.add('error');
                 this.classList.add('shake');
                 setTimeout(() => {
@@ -66,8 +66,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 setTimeout(() => {
                     let targetUrl = '';
                     if (this.id === 'ch1') {
-                        targetUrl = 'ch4.html'; // 點擊 CH1 時跳轉到第三頁
+                        targetUrl = 'ch1.html'; // 點擊 CH1 時跳轉到第三頁
                     } else if (this.id === 'ch2') {
+                        targetUrl = 'ch2.html'; // 點擊 CH2 時跳轉到另一個頁面
+                    }else if (this.id === 'ch3') {
                         targetUrl = 'ch3.html'; // 點擊 CH2 時跳轉到另一個頁面
                     }
                     window.location.href = targetUrl;
