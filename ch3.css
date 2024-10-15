@@ -65,9 +65,9 @@ body.slide-down {
         padding: 0;
     }
 
-    body {
+    body, html{
         overflow: hidden; /* 禁用滾動條 */
-    } 
+       }
 
     /* 中央容器 */
      .container {
