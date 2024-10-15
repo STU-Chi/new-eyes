@@ -164,6 +164,10 @@ body.slide-up {
       font-size: 25px;
     }
 
+    .text-item {
+        font-size: 5vh;
+    }
+    
     #password {
      padding: 10px 10px;
      font-size: 16px;
