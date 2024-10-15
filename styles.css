@@ -150,8 +150,13 @@ body.slide-up {
 /* 手機板 */
 @media only screen and (max-width: 768px) {
 
+    @font-face {
+        font-family: 'mvboliFont'; /* 自訂字體名稱 */
+        src: url('fonts/mvboli.ttf') format('truetype'); /* 字體文件路徑及格式 */
+    }
+
     body, html{
-     font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
+     font-family: 'MV Boli', 'YouMurderer BB', 'mvboliFont','CipherFontA'; /* 終端機風格字體 */
      letter-spacing: 0.1em
     }
 
