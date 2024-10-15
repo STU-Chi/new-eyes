@@ -99,10 +99,11 @@ body.slide-down {
     }
 
     h1 {
-        font-size: 6vh;
+        font-size: 5.3vh;
         letter-spacing: 0.3em;
         margin: 2vh;
         border: 5px solid transparent;
         margin-right: 5px;
+        line-height: 1.8; /* 1.8倍字體大小的行高 */
     }
 }
