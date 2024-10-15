@@ -6,11 +6,11 @@ const dialog = [
 
 "Hello STU 22115103 - Hliex ", 
 
-"My friend, you have met a terrible, terrible demise. But, uh, you know", 
+"My friend, you have met a terrible, terrible demise. ",
 
-"I-I don’t feel too bad about it.After all, if- if it weren’t from me, it would ",
+"But, uh, you know. I-I don’t feel too bad about it.",
 
-"have just been from 「someone else, ya know? I guess ,what I’m trying to say is life, life goes on.」 ",
+"After all, if- if it weren’t from me, it would have just been from 「someone else, ya know? I guess ,what I’m trying to say is life, life goes on.」 ",
 
 "W- well, from- for everyone else, life goes on. Not- not for you, you’re,",
 
