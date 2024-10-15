@@ -5,14 +5,21 @@ document.addEventListener('DOMContentLoaded', function () {
     // 檢查密碼是否正確
     function checkPassword() {
         const password = passwordInput.value.trim().toUpperCase();
-        if (password === 'POWER') { 
+        if (password === 'LUCAIN') { 
             // 密碼正確，添加過渡動畫，並在動畫後跳轉到下一頁
             document.body.classList.add('slide-up');
             setTimeout(() => {
-                window.location.href = 'CH.html'; // 跳轉到下一個頁面
+                window.location.href = 'CH4.html'; // 跳轉到下一個頁面
             }, 500); // 等待動畫完成後進行跳轉
-           
-        } else {
+
+        }if (password === 'POWER') { 
+                // 密碼正確，添加過渡動畫，並在動畫後跳轉到下一頁
+                document.body.classList.add('slide-up');
+                setTimeout(() => {
+                    window.location.href = 'CH.html'; // 跳轉到下一個頁面
+                }, 500); // 等待動畫完成後進行跳轉
+               
+        }else {
             // 密碼錯誤，顯示錯誤效果
             passwordInput.classList.add('error', 'shake');
             setTimeout(() => {

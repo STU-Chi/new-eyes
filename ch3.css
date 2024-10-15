@@ -57,6 +57,25 @@ body.slide-down {
     src: url('fonts/MURDERER.TTF') format('truetype'); /* 字體文件路徑及格式 */
 }
 
+/* 設定訊息顯示區域的樣式 */
+.right-click-message {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    font: 12px;
+    border-radius: 5px;
+    display: none; /* 預設不顯示 */
+    z-index: 1000;
+    text-shadow: 
+                2px 2px red, 
+                -2px -2px blue, 
+                1px 1px green; /* 創建扭曲的陰影效果 */
+    letter-spacing:-0.1rem;
+}
+
 /* 手機裝置 */
 @media only screen and (max-width: 768px) {
 

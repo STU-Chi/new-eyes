@@ -12,3 +12,16 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+document.addEventListener('contextmenu', function (event) {
+    event.preventDefault(); // 阻止右鍵選單彈出
+
+    // 顯示訊息
+    const messageDiv = document.getElementById('message');
+    messageDiv.style.display = 'block';
+
+    // 自動隱藏訊息，2 秒後消失
+    setTimeout(function () {
+        messageDiv.style.display = 'none';
+    }, 2000);
+});
