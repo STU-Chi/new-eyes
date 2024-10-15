@@ -56,6 +56,17 @@ body.slide-down {
     box-shadow: 0 0 10px rgb(255, 255, 255);
 }
 
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    pointer-events: none; /* 防止鼠標和提示框互動 */
+    display: none; /* 初始隱藏 */
+    font: normal normal normal 14px / 1.4em proxima-n-w01-reg;
+}
+
 @font-face {
     font-family: 'MurdererFont'; /* 自訂字體名稱 */
     src: url('fonts/MURDERER.TTF') format('truetype'); /* 字體文件路徑及格式 */
