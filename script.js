@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // 密碼正確，添加過渡動畫，並在動畫後跳轉到下一頁
             document.body.classList.add('slide-up');
             setTimeout(() => {
-                window.location.href = 'CH4.html'; // 跳轉到下一個頁面
+                window.location.href = 'ch4.html'; // 跳轉到下一個頁面
             }, 500); // 等待動畫完成後進行跳轉
 
         }if (password === 'POWER') { 
