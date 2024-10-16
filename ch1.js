@@ -82,17 +82,22 @@ function a1z26Decrypt(text) {
 }
 
 
-    
+// 檢查字串是否為二進位格式
+function isBinary(str) {
+    return /^[01\s]+$/.test(str);
+}
+
+// 將文本加密為二進位
+function textToBinary(text) {
+    return text.split('')
+        .map(char => char.charCodeAt(0).toString(2).padStart(8, '0'))
+        .join(' ');
+}
+
 // 將二進位解密為文本
 function binaryToText(binary) {
     return binary.split(' ')
-        .map(bin => {
-            const charCode = parseInt(bin, 2);
-            if (isNaN(charCode)) {
-                return ''; // 不能轉換的情況，返回空字串
-            }
-            return String.fromCharCode(charCode);
-        })
+        .map(bin => String.fromCharCode(parseInt(bin, 2)))
         .join('');
 }
 
@@ -103,10 +108,6 @@ function binarycipher() {
     // 只對允許的字符（英文字母、數字和空格）進行加密
     let validText = filterValidCharacters(inputText);
 
-    if (validText.length === 0) {
-        return;
-    }
-
     if (isBinary(validText)) {
         // 如果是二進位，執行解密
         let decryptedText = binaryToText(validText);
@@ -116,6 +117,12 @@ function binarycipher() {
         let encryptedBinary = textToBinary(validText);
         document.getElementById('text-area').value = encryptedBinary;
     }
+}
+
+// 過濾非英文字母、數字或空格的字符
+function filterValidCharacters(text) {
+    // 只允許 a-z、A-Z、0-9 和空格
+    return text.replace(/[^a-zA-Z0-9 ]/g, '');
 }
 
 
