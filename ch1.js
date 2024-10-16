@@ -119,11 +119,7 @@ function binarycipher() {
     }
 }
 
-// 過濾非英文字母、數字或空格的字符
-function filterValidCharacters(text) {
-    // 只允許 a-z、A-Z、0-9 和空格
-    return text.replace(/[^a-zA-Z0-9 ]/g, '');
-}
+
 
 // 檢查金鑰是否有效
 function validateKey(key) {
@@ -136,7 +132,6 @@ function validateKey(key) {
         alert("Key has no letters");
         return false;
     }
-
     return true;
 }
 
@@ -197,6 +192,7 @@ function vigenereDecrypt() {
         document.getElementById('text-area').value = decryptedText;
     }
 }
+
 
 // 摩斯碼對應表
 const morseCode = {
