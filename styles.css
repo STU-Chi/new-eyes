@@ -19,8 +19,8 @@ body, html {
 
 /* 輸入框樣式 */
 #password {
-    padding: 10px;
-    font-size: 18px;
+    padding: 2vh;
+    font-size: 3vh;
     border: 2px solid white;
     border-radius: 5px;
     color: white;
@@ -32,8 +32,8 @@ body, html {
 
 /* 按鈕樣式 */
 #submit {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 2vh 1.2vw;
+    font-size: 3vh;
     border: 2px solid white;
     border-radius: 5px;
     background-color: black;
@@ -190,10 +190,18 @@ body.slide-up {
 
 @media only screen and (min-width: 769px) and (max-width:1024px) {
 
+    @font-face {
+        font-family: 'mvboliFont'; /* 自訂字體名稱 */
+        src: url('fonts/mvboli.ttf') format('truetype'); /* 字體文件路徑及格式 */
+    }
+
     body, html{
         font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
         letter-spacing: 0.2em
        }
    
+       .text-item {
+        padding: 20px;
+    }
 
 }

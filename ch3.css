@@ -109,3 +109,37 @@ body.slide-down {
         margin-right: 5px;
     }
 }
+
+@media only screen and (min-width:769px) and (max-width: 1024px) {
+
+    body, html {
+        margin: 0;
+        padding: 0;
+    }
+
+    body, html{
+        overflow: hidden; /* 禁用滾動條 */
+       }
+
+    /* 中央容器 */
+     .container {
+        text-align: center;
+        margin: 5px;
+    }
+
+    .back-button {
+        padding: 1vh 4vw;
+        font-size: 8vw;
+        left: 3px;
+        margin-top: 10vh;
+    }
+
+    h1 {
+        font-size: 6vh;
+        letter-spacing: 0.3em;
+        margin: 2vh;
+        border: 5px solid transparent;
+        margin-right: 5px;
+    }
+
+}

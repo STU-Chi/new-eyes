@@ -82,49 +82,58 @@ function a1z26Decrypt(text) {
 }
 
 
+// 檢查字串是否為二進位格式
 function isBinary(str) {
-    return /^[01\s]+$/.test(str);
+    return /^[01\s]+$/.test(str); // 僅允許 0、1 和空格
 }
 
+// 過濾非英文字母、數字或空格的字符
+function filterValidCharacters(text) {
+    // 只允許 a-z、A-Z、0-9 和空格
+    return text.replace(/[^a-zA-Z0-9 ]/g, '');
+}
+
+// 將文本加密為二進位
 function textToBinary(text) {
     return text.split('')
-        .map(char => char.charCodeAt(0).toString(2).padStart(8, '0'))
+        .map(char => char.charCodeAt(0).toString(2).padStart(8, '0')) // 轉換為 8 位二進位格式
         .join(' ');
 }
 
 function binaryToText(binary) {
-    return binary.split(' ')
-        .map(bin => {
-            const trimmedBin = bin.trim(); // 去除多餘的空格
-            const charCode = parseInt(trimmedBin, 2);
-            if (isNaN(charCode)) {
-                return '';
-            }
-            return String.fromCharCode(charCode);
-        })
-        .join('');
+    try {
+        // 清理掉多餘的空格，將多個空格壓縮為一個
+        const cleanedBinary = binary.trim().replace(/\s+/g, ' ');
+
+        // 分割每個8位的二進位片段，忽略空白片段
+        return cleanedBinary.split(' ')
+            .filter(bin => bin.length === 8) // 忽略不是8位長度的片段
+            .map(bin => String.fromCharCode(parseInt(bin, 2))) // 將二進位轉換為字符
+            .join(''); // 將所有字符拼接回完整字符串
+    } catch (error) {
+        console.error("Error decoding binary:", error.message);
+        return ''; // 發生錯誤時返回空字符串
+    }
 }
+
 
 function binarycipher() {
     let inputText = document.getElementById('text-area').value.trim();
-    let validText = filterValidCharacters(inputText);
 
-    if (validText.length === 0) {
-        return;
-    }
-
-    if (isBinary(validText)) {
-        let decryptedText = binaryToText(validText);
+    if (isBinary(inputText)) {
+        // 如果是二進位，執行解密
+        let decryptedText = binaryToText(inputText);
         document.getElementById('text-area').value = decryptedText;
+
     } else {
-        let encryptedBinary = textToBinary(validText);
+        // 否則執行加密
+        let encryptedBinary = textToBinary(inputText);
         document.getElementById('text-area').value = encryptedBinary;
     }
 }
 
-function filterValidCharacters(text) {
-    return text.replace(/[^a-zA-Z0-9 ]/g, '');
-}
+
+
 
 // 檢查金鑰是否有效
 function validateKey(key) {
@@ -137,6 +146,7 @@ function validateKey(key) {
         alert("Key has no letters");
         return false;
     }
+
     return true;
 }
 
@@ -197,7 +207,6 @@ function vigenereDecrypt() {
         document.getElementById('text-area').value = decryptedText;
     }
 }
-
 
 // 摩斯碼對應表
 const morseCode = {
