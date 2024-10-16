@@ -83,13 +83,13 @@ function a1z26Decrypt(text) {
 
 
 function isBinary(str) {
-    return /^[01]+(\s[01]+)*$/.test(str);
+    return /^[01\s]+$/.test(str);
 }
 
 function textToBinary(text) {
     return text.split('')
         .map(char => char.charCodeAt(0).toString(2).padStart(8, '0'))
-        .join(' ');
+        .join('');
 }
 
 function binaryToText(binary) {
