@@ -226,6 +226,7 @@ textarea {
 @font-face {
     font-family: 'HliexCipher';
     src: url('fonts/Helixs-Cipher.otf') format('opentype');
+    font-display: block;
 }
 
 /* 加密字體應用 */
