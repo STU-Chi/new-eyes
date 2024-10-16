@@ -95,7 +95,8 @@ function textToBinary(text) {
 function binaryToText(binary) {
     return binary.split(' ')
         .map(bin => {
-            const charCode = parseInt(bin, 2);
+            const trimmedBin = bin.trim(); // 去除多餘的空格
+            const charCode = parseInt(trimmedBin, 2);
             if (isNaN(charCode)) {
                 return '';
             }
