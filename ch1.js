@@ -97,8 +97,7 @@ function binaryToText(binary) {
         .map(bin => {
             const charCode = parseInt(bin, 2);
             if (isNaN(charCode)) {
-              
-                return ''; // 返回空字串
+                return '';
             }
             return String.fromCharCode(charCode);
         })
@@ -125,10 +124,6 @@ function binarycipher() {
 function filterValidCharacters(text) {
     return text.replace(/[^a-zA-Z0-9 ]/g, '');
 }
-
-window.onload = function() {
-    document.getElementById('encrypt-button').onclick = binarycipher;
-};
 
 // 檢查金鑰是否有效
 function validateKey(key) {
