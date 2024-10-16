@@ -84,7 +84,7 @@ function a1z26Decrypt(text) {
 
 // 檢查字串是否為二進位格式
 function isBinary(str) {
-    return /^[01\s]+$/.test(str);
+    return /^[01]+(\s[01]+)*$/.test(str); // 支持以空格分隔的二進位數
 }
 
 // 將文本加密為二進位
