@@ -81,16 +81,17 @@ function a1z26Decrypt(text) {
     return decryptedText;
 }
 
-
-
-
-
-
 **********************************************************************
     
 // 檢查字串是否為二進位格式
 function isBinary(str) {
-    return /^[01]+(\s[01]+)*$/.test(str); // 修改為支持以空格分隔的二進位數
+    return /^[01\s]+$/.test(str);
+}
+
+// 過濾非英文字母、數字或空格的字符
+function filterValidCharacters(text) {
+    // 只允許 a-z、A-Z、0-9 和空格
+    return text.replace(/[^a-zA-Z0-9 ]/g, '');
 }
 
 // 將文本加密為二進位
