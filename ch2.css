@@ -145,7 +145,7 @@ body.slide-down {
         display: inline-block; /* 使按鈕能夠設定寬度 */
         padding: 13px 52px;
         text-indent: -5px; /* 文字左移 */
-        font-size: 23px;
+        font-size: 18px;
     }
 
     .dialog-box {

@@ -358,28 +358,33 @@ body.slide-down {
             max-height: 490px;  /* 設定最大高度 */
         }
 
-        .container h1,
-        .container p {
-        margin-top: -4px;  /* 調整上方的外部邊距 */
+        .container h1, .container p {
+            margin-bottom: 3vh;
         }
 
 
         .back-button {
             left: 10px;
-            top : 20%;
+            top : 11%;
         }
 
         textarea {
             font-size: 20px;
+            height: 15vh;
         }
 
         .buttons button, .vigenere-section button {
-            padding: 12px 18px;
-            font-size: 16px;
+            padding: 12px 16px;
+            font-size: 19px;
+            margin-bottom: 15px;
         }
 
         .vigenere-section input {
             font-size: 16px;
+        }
+
+        .buttons, .vigenere-section {
+            margin-bottom: 0.5vh;
         }
 
         /* 直向模式下的樣式調整 */
