@@ -202,6 +202,27 @@ body.slide-up {
    
        .text-item {
         padding: 20px;
+        margin:2.5vh;
+    }
+    
+    #password {
+        padding: 1.5vh 5vw;
+        font-size: 3.5vh;
+        margin-left: 5px;
+        width: 45vw;
+        margin-bottom: 10px;
+        border-radius: 8px;
+    }
+
+    #submit {
+        padding: 1.8vh 2.5vw;
+        font-size: 3vh;
+        border-radius: 8px;
+        margin-left: 25px;
+    }
+
+    h1 {
+     font-size: 4em;
     }
 
 }
