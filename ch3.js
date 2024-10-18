@@ -23,5 +23,5 @@ document.addEventListener('contextmenu', function (event) {
     // 自動隱藏訊息，2 秒後消失
     setTimeout(function () {
         messageDiv.style.display = 'none';
-    }, 2000);
+    }, 3000);
 });

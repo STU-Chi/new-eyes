@@ -55,6 +55,7 @@ body.slide-down {
 @font-face {
     font-family: 'MurdererFont'; /* 自訂字體名稱 */
     src: url('fonts/MURDERER.TTF') format('truetype'); /* 字體文件路徑及格式 */
+    font-display: block;
 }
 
 /* 設定訊息顯示區域的樣式 */
@@ -107,6 +108,9 @@ body.slide-down {
         margin: 2vh;
         border: 5px solid transparent;
         margin-right: 5px;
+    }
+    .right-click-message {
+        bottom: 35px;
     }
 }
 
