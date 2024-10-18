@@ -196,11 +196,11 @@ body.slide-up {
     }
 
     body, html{
-        font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
-        letter-spacing: 0.2em
-       }
-   
-       .text-item {
+     font-family: 'MV Boli', 'mvboliFont','YouMurderer BB'; /* 終端機風格字體 */
+     letter-spacing: 0.2em
+    }
+
+    .text-item {
         padding: 20px;
         margin:2.5vh;
     }
@@ -222,7 +222,7 @@ body.slide-up {
     }
 
     h1 {
-     font-size: 4em;
+        font-size: 4em;
     }
 
 }
