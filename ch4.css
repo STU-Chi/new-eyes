@@ -176,6 +176,15 @@ body.slide-down {
         border: 5px solid transparent;
         margin-right: 5px;
         line-height: 1.8; /* 1.8倍字體大小的行高 */
+        text-shadow: 1px 1px red, -1px -1px blue, 1px 1px green;
+    }
+
+    h1::before {
+        text-shadow: -1px 0 red (132, 0, 255);
+    }
+    
+    h1::after {
+        text-shadow: -1px 0 blue;
     }
 
     /* 頂部和底部的偏移和閃爍 */
