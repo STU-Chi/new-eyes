@@ -30,6 +30,76 @@ h1 {
     -2px -2px blue, 
     1px 1px green; /* 創建扭曲的陰影效果 */
     letter-spacing:0.3em;
+    position: relative;
+    animation: glitch 1s infinite;
+}
+
+/* 創建多個不同層次的重影 */
+h1::before, h1::after {
+    font-family: 'MurdererFont', sans-serif; /* 應用自訂字體到標題，並設定備用字體 */
+    content: "You cheated, didn't you?";
+    position: absolute;
+    color: #ff5e00; /* 螢光綠字體顏色 */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    overflow: hidden;
+}
+
+h1::before {
+    left: -3px;
+    text-shadow: -2px 0 red (132, 0, 255);
+    clip: rect(24px, 1200px, 90px, 0);
+    animation: glitch-top 1s infinite;
+}
+
+h1::after {
+    left: 2px;
+    text-shadow: -2px 0 blue;
+    clip: rect(85px, 1200px, 140px, 0);
+    animation: glitch-bottom 0.5s infinite;
+}
+
+/* 闪烁和抖动效果 */
+@keyframes glitch {
+    20% {
+        transform: translate(-2px, 2px);
+    }
+    40% {
+        transform: translate(2px, -2px);
+    }
+    60% {
+        transform: translate(-2px, -2px);
+    }
+    80% {
+        transform: translate(2px, 2px);
+    }
+
+}
+
+/* 頂部和底部的偏移和閃爍 */
+@keyframes glitch-top {
+    50% {
+        clip: rect(0px, 1200px, 120px, 0);
+        transform: translate(2px, 2px);
+    }
+    100% {
+        clip: rect(30px, 1200px, 150px, 0);
+        transform: translate(-1px, -1px);
+    }    
+}
+
+@keyframes glitch-bottom {
+    50% {
+        clip: rect(50px, 1200px, 130px, 0);
+        transform: translate(-2px, -2px);
+    }
+    100% {
+        clip: rect(85px, 1200px, 140px, 0);
+        transform: translate(2px, 2px);
+    }
 }
 
 body.slide-down {
@@ -107,6 +177,29 @@ body.slide-down {
         margin-right: 5px;
         line-height: 1.8; /* 1.8倍字體大小的行高 */
     }
+
+    /* 頂部和底部的偏移和閃爍 */
+    @keyframes glitch-top {
+        50% {
+            clip: rect(0px, 1200px, 120px, 0);
+            transform: translate(2px, 2px);
+        }
+        100% {
+            clip: rect(25px, 1200px, 150px, 0);
+            transform: translate(-1px, -1px);
+        }    
+    }
+
+    @keyframes glitch-bottom {
+        50% {
+            clip: rect(73px, 1200px, 130px, 0);
+            transform: translate(-2px, -2px);
+        }
+        100% {
+            clip: rect(80px, 1200px, 140px, 0);
+            transform: translate(1px, 1px);
+        }
+    }
 }
 
 @media only screen and (min-width:769px) and (max-width: 1024px) {
@@ -140,6 +233,44 @@ body.slide-down {
         border: 5px solid transparent;
         margin-right: 5px;
         line-height: 1.8; /* 1.8倍字體大小的行高 */
+        text-shadow: 
+        2px 2px red, 
+        -2px -2px blue, 
+        1px 1px green; /* 創建扭曲的陰影效果 */
+        letter-spacing:0.3em;
+        position: relative;
+        animation: glitch 1s infinite;
+    }
+
+    h1::before {
+        text-shadow: -2px 0 red (132, 0, 255);
+    }
+    
+    h1::after {
+        text-shadow: -2px 0 blue;
+    }
+
+    /* 頂部和底部的偏移和閃爍 */
+    @keyframes glitch-top {
+        50% {
+            clip: rect(0px, 1200px, 120px, 0);
+            transform: translate(2px, 2px);
+        }
+        100% {
+            clip: rect(25px, 1200px, 150px, 0);
+            transform: translate(-1px, -1px);
+        }    
+    }
+
+    @keyframes glitch-bottom {
+        50% {
+            clip: rect(73px, 1200px, 130px, 0);
+            transform: translate(-2px, -2px);
+        }
+        100% {
+            clip: rect(80px, 1200px, 140px, 0);
+            transform: translate(1px, 1px);
+        }
     }
 
 }
