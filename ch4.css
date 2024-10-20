@@ -185,6 +185,7 @@ body.slide-down {
     
     h1::after {
         text-shadow: -1px 0 blue;
+        animation: glitch-bottom 1s infinite;
     }
 
     /* 頂部和底部的偏移和閃爍 */
@@ -201,11 +202,11 @@ body.slide-down {
 
     @keyframes glitch-bottom {
         50% {
-            clip: rect(73px, 1200px, 130px, 0);
-            transform: translate(-2px, -2px);
+            clip: rect(83px, 1200px, 130px, 0);
+            transform: translate(-1px, -2px);
         }
         100% {
-            clip: rect(80px, 1200px, 140px, 0);
+            clip: rect(88px, 1200px, 140px, 0);
             transform: translate(1px, 1px);
         }
     }
@@ -262,11 +263,11 @@ body.slide-down {
     /* 頂部和底部的偏移和閃爍 */
     @keyframes glitch-top {
         50% {
-            clip: rect(0px, 1200px, 120px, 0);
+            clip: rect(40px, 1200px, 120px, 0);
             transform: translate(2px, 2px);
         }
         100% {
-            clip: rect(25px, 1200px, 150px, 0);
+            clip: rect(60px, 1200px, 150px, 0);
             transform: translate(-1px, -1px);
         }    
     }
