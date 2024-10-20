@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="Turth.css">
+  <link rel="preload" href="fonts/BatterPark.ttf" as="font" type="font/ttf">
+  <title>Turth</title>
+</head>
+<body>
+
+<!-- 按鈕 -->
+<button class="absolute text-button float-button"style="left: 12%; top: 100px; animation-delay: -0.8s" id="myButton">
+  CHECK ME
+</button>
+
+<!-- 隨機出現的按鈕 -->
+<button class="absolute read-button" id="randomButton" style="display: none;">
+    here
+</button>
+
+<!-- 視窗 (modal) 與遮罩層 -->
+<div class="modal-overlay" id="modalOverlay">
+    <div class="modal" id="myModal">
+      <p id="modalContent"> </p>
+    </div>
+</div>
+
+<!-- 引入外部的 JavaScript 文件 -->
+<script src="Turth.js"></script>
+
+</body>
+</html>

@@ -103,6 +103,7 @@ body.slide-down {
     }
 
     h1 {
+        user-select: none; /* 禁用文字選取 */
         font-size: 6vh;
         letter-spacing: 0.3em;
         margin: 2vh;

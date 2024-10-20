@@ -1,0 +1,119 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'BatterParkFont','Courier New', Courier; /* 終端機風格字體 */
+    background-color: #000000; /* 深藍色背景 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transform: translateY(0);
+}
+
+/* 基本樣式設計 */
+.absolute {
+    position: absolute;
+}
+
+@font-face {
+    font-family: 'BatterParkFont'; /* 自訂字體名稱 */
+    src: url('fonts/BatterPark.ttf') format('truetype'); /* 字體文件路徑及格式 */
+    font-display: block;
+}
+
+@font-face {
+    font-family: 'kidwrite'; /* 自訂字體名稱 */
+    src: url('fonts/kidwrite.ttf') format('truetype'); /* 字體文件路徑及格式 */
+    font-display: block;
+}
+
+.read-button{
+    font-family: 'kidwrite','Courier New', Courier, monospace;
+    background: none;
+        border: none;
+    color: rgb(247, 132, 0); /* 可自行設定文字顏色 */
+    font-size: 46px;
+    cursor: pointer;
+    padding: 0;
+}
+
+/* 按鈕只顯示文字的樣式 */
+.text-button {
+    user-select: none; /* 禁用文字選取 */
+    font-family: 'BatterParkFont','Courier New', Courier, monospace;
+    background: none;
+        border: none;
+    color: rgb(194, 194, 194); /* 可自行設定文字顏色 */
+    font-size: 46px;
+    cursor: pointer;
+    padding: 0;
+}
+
+.text-button:hover {
+    color: rgb(137, 137, 148); /* 滑鼠移過時文字變色 */
+}
+
+/* 小飄移動畫 */
+@keyframes float {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(5px, -15px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* 給按鈕加上飄移動畫 */
+.float-button {
+    animation: float 3s ease-in-out infinite;
+}
+
+.modal {
+    user-select: none; /* 禁用文字選取 */
+    display: none;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 20px;
+    background-color: rgba(109, 109, 109, 0.26);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    border-radius: 8px;
+    z-index: 1001;
+    letter-spacing: 3.5px; /* 調整字間距，可以根據需要調整 */
+    font-size: 2rem;
+    font-family: 'kidwrite','Courier New', Courier, monospace;
+}
+
+  
+/* 特殊樣式：字體變大 */
+.large-text {
+    font-size: 80px; /* 調整字體大小 */
+    color: red; /* 變更顏色，根據需要調整 */
+}
+
+.modal.show {
+    display: block;
+}
+
+.modal-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.modal-overlay.show {
+    display: block;
+}
