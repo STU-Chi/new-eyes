@@ -81,7 +81,7 @@ body, html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 50vh;
+    width: 40vh;
     padding: 20px;
     background-color: rgba(109, 109, 109, 0.26);
     color: rgb(255, 255, 255);
@@ -96,7 +96,7 @@ body, html {
   
 /* 特殊樣式：字體變大 */
 .large-text {
-    font-size: 80px; /* 調整字體大小 */
+    font-size: 8vh; /* 調整字體大小 */
     color: red; /* 變更顏色，根據需要調整 */
 }
 
