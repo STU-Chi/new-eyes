@@ -30,6 +30,7 @@ body, html {
 }
 
 .read-button{
+    user-select: none; /* 禁用文字選取 */
     font-family: 'kidwrite','Courier New', Courier, monospace;
     background: none;
         border: none;
