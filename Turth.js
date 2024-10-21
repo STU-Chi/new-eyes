@@ -31,6 +31,7 @@ button.addEventListener('click', () => {
     modalContent.classList.remove('large-text'); // 移除大字樣式
   }else if (clickCount < 13) {
     modalContent.textContent = "Well,Go ahead,Do whatever you want!";
+    modalContent.classList.remove('large-text'); // 移除大字樣式
   }else if (clickCount < 15) {
     modalContent.textContent = ".....";
   } else if (clickCount < 16) {
