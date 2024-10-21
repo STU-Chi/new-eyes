@@ -172,6 +172,7 @@ body.slide-down {
     }
 
     h1 {
+        user-select: none; /* 禁用文字選取 */
         font-size: 5.3vh;
         letter-spacing: 0.3em;
         margin: 2vh;
@@ -232,6 +233,7 @@ body.slide-down {
     }
 
     .back-button {
+        user-select: none; /* 禁用文字選取 */
         padding: 1vh 4vw;
         font-size: 8vw;
         left: 3px;

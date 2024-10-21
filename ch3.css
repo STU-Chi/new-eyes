@@ -22,6 +22,7 @@ body {
 } 
 
 h1 {
+    user-select: none; /* 禁用文字選取 */
     font-family: 'MurdererFont', sans-serif; /* 應用自訂字體到標題，並設定備用字體 */
     font-size: 12vh; /* 設置字體大小 */
     text-align: center; /* 標題居中 */
@@ -34,6 +35,7 @@ body.slide-down {
 
 /* 返回按鈕樣式 */
 .back-button {
+    user-select: none; /* 禁用文字選取 */
     position: absolute;
     top: 20px;
     left: 20px; /* 距離頁面左邊的距離 */
@@ -110,6 +112,7 @@ body.slide-down {
         border: 5px solid transparent;
         margin-right: 5px;
     }
+
     .right-click-message {
         bottom: 35px;
     }

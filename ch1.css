@@ -50,6 +50,7 @@ h1 {
 }
 
 .container h1, .container p {
+    user-select: none; /* 禁用文字選取 */
     margin-top: 0vh;  /* 調整上方的外部邊距 */
 }
 
@@ -66,6 +67,7 @@ body.slide-down {
     transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
 }
 .back-button {
+    user-select: none; /* 禁用文字選取 */
     transition: background-color 0.3s ease;
 }
 
@@ -82,8 +84,6 @@ textarea {
     width: 90%;
     height: 25vh;
     font-size: 2vw;
-    
-    
 }
 
 .buttons-container {
@@ -98,6 +98,7 @@ textarea {
 }
 
 .buttons button, .vigenere-section button {
+    user-select: none; /* 禁用文字選取 */
     padding: 2.3vh 1.3vw;
     margin: 6px;
     font-size: 1.4vw;
@@ -319,6 +320,7 @@ body.slide-down {
     
 
     .buttons button {
+      user-select: none; /* 禁用文字選取 */
       flex: 1 0 10%; /* 確保每行顯示三個按鈕，並自動調整寬度 */
       padding: 2vh 1.3vw;
       border-radius: 5px;
