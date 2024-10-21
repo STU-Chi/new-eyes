@@ -80,7 +80,7 @@ body, html {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 300px;
+    width: 50vh;
     padding: 20px;
     background-color: rgba(109, 109, 109, 0.26);
     color: rgb(255, 255, 255);
@@ -88,7 +88,7 @@ body, html {
     border-radius: 8px;
     z-index: 1001;
     letter-spacing: 3.5px; /* 調整字間距，可以根據需要調整 */
-    font-size: 2rem;
+    font-size: 5vh;
     font-family: 'kidwrite','Courier New', Courier, monospace;
 }
 
