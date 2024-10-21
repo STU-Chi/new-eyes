@@ -29,16 +29,15 @@ button.addEventListener('click', () => {
   } else if (clickCount < 12) {
     modalContent.textContent = ".....";
     modalContent.classList.remove('large-text'); // 移除大字樣式
-  }else if (clickCount < 13) {
+  } else if (clickCount < 14) {
     modalContent.textContent = "Well,Go ahead,Do whatever you want!";
-    modalContent.classList.remove('large-text'); // 移除大字樣式
-  }else if (clickCount < 15) {
-    modalContent.textContent = ".....";
   } else if (clickCount < 16) {
+    modalContent.textContent = ".....";
+  } else if (clickCount < 17) {
     modalContent.textContent = "Who am I fooling?";
-  }else if (clickCount < 17) {
+  } else if (clickCount < 18) {
     modalContent.textContent = " You know what?You Win!...bye";
-  }else {
+  } else {
     modalContent.textContent = `This is the ${clickCount} th click,The creator is offline!`;
     modalContent.classList.remove('large-text'); // 移除大字樣式
   }
