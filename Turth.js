@@ -26,7 +26,7 @@ button.addEventListener('click', () => {
   } else if (clickCount === 11) {
     modalContent.textContent = "STOP IT!";
     modalContent.classList.add('large-text'); // 加入大字樣式
-  } else if (clickCount < 12) {
+  } else if (clickCount < 13) {
     modalContent.textContent = ".....";
     modalContent.classList.remove('large-text'); // 移除大字樣式
   } else if (clickCount < 14) {
