@@ -83,22 +83,22 @@ h1::after {
 /* 頂部和底部的偏移和閃爍 */
 @keyframes glitch-top {
     50% {
-        clip: rect(0px, 1200px, 120px, 0);
+        clip: rect(0px, 2300px, 120px, 0);
         transform: translate(2px, 2px);
     }
     100% {
-        clip: rect(30px, 1200px, 150px, 0);
+        clip: rect(30px, 2300px, 150px, 0);
         transform: translate(-1px, -1px);
     }    
 }
 
 @keyframes glitch-bottom {
     50% {
-        clip: rect(50px, 1200px, 130px, 0);
+        clip: rect(75px, 2300px, 130px, 0);
         transform: translate(-2px, -2px);
     }
     100% {
-        clip: rect(85px, 1200px, 140px, 0);
+        clip: rect(105px, 2300px, 140px, 0);
         transform: translate(2px, 2px);
     }
 }
