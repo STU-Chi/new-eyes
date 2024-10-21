@@ -22,16 +22,20 @@ button.addEventListener('click', () => {
   } else if (clickCount < 8) {
     modalContent.textContent = "You are so boring! Isn't it?";
   } else if (clickCount === 10) {
-    modalContent.textContent = "Go ahead!";
-    modalContent.classList.add('large-text'); // 加入大字樣式
-  } else if (clickCount === 11) {
     modalContent.textContent = "Don't force me to be rude！";
-    modalContent.classList.remove('large-text'); // 移除大字樣式
-  } else if (clickCount < 14) {
+  } else if (clickCount === 11) {
+    modalContent.textContent = "STOP IT!";
+    modalContent.classList.add('large-text'); // 加入大字樣式
+  } else if (clickCount < 12) {
     modalContent.textContent = ".....";
-  } else if (clickCount < 15) {
+    modalContent.classList.remove('large-text'); // 移除大字樣式
+  }else if (clickCount < 13) {
+    modalContent.textContent = "Well,Go ahead,Do whatever you want!";
+  }else if (clickCount < 15) {
+    modalContent.textContent = ".....";
+  } else if (clickCount < 16) {
     modalContent.textContent = "Who am I fooling?";
-  }else if (clickCount < 16) {
+  }else if (clickCount < 17) {
     modalContent.textContent = " You know what?You Win!...bye";
   }else {
     modalContent.textContent = `This is the ${clickCount} th click,The creator is offline!`;
