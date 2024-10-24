@@ -38,7 +38,7 @@ button.addEventListener('click', () => {
   } else if (clickCount < 18) {
     modalContent.textContent = " You know what?You Win!...bye";
   } else {
-    modalContent.textContent = `This is the ${clickCount} th click,The creator is offline!`;
+    modalContent.textContent = `The creator is offline!`;
     modalContent.classList.remove('large-text'); // 移除大字樣式
   }
 

@@ -97,7 +97,7 @@ body, html {
   
 /* 特殊樣式：字體變大 */
 .large-text {
-    font-size: 8vh; /* 調整字體大小 */
+    font-size: 9vh; /* 調整字體大小 */
     color: red; /* 變更顏色，根據需要調整 */
 }
 

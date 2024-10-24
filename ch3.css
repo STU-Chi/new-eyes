@@ -114,7 +114,8 @@ body.slide-down {
     }
 
     .right-click-message {
-        bottom: 35px;
+        font-size: 17px;
+        top: 65%;
     }
 }
 

@@ -10,10 +10,30 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative; /* 使三角形可以相對定位 */
 }
 
 h1 {
     font-size: 3vw;
+}
+
+/* 三角形樣式 */
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+    border-bottom: 65px solid #FFFFFF;
+    position: absolute; /* 絕對定位三角形 */
+    top: 40%; /* 根據需要調整 */
+    transform: translateX(-50%); /* 居中 */
+    display: none; /* 初始隱藏 */
+}
+
+/* 隱形數字樣式 */
+.invisible {
+    user-select: none; /* 禁止文字選取 */
+    visibility: hidden; /* 讓元素隱形，但仍佔據空間 */
 }
 
 /* 輸入框和按鈕容器樣式 */
@@ -53,7 +73,6 @@ h1 {
     background-color: darkgray; /* 當滑鼠懸停時，背景顏色改變 */
     border-color: gray;         /* 邊框顏色也改變 */
     color: black;  
-
 }
 
 /* 按鈕點擊時變色 */
@@ -167,6 +186,17 @@ body.slide-up {
 
     h1 {
       font-size: 25px;
+    }
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 45px solid #FFFFFF;
+        position: absolute;
+        transform: translateX(-25%);
+        display: none;
     }
 
     .text-item {

@@ -1,6 +1,11 @@
 document.addEventListener('DOMContentLoaded', function () {
     const passwordInput = document.getElementById('password');
     const submitButton = document.getElementById('submit');
+    const messageElement = document.getElementById('message');
+
+    let isTriangle = false; // 狀態變數，用來判斷是否顯示三角形
+    const originalMessage = '16-15-23-5-18'; // 原文
+
 
     // 檢查密碼是否正確
     function checkPassword() {
@@ -29,15 +34,55 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // 按鈕點擊事件
-    submitButton.addEventListener('click', checkPassword);
+    // 切換顯示三角形或文字
+const toggleMessage = () => {
+    const inputValue = passwordInput.value.toLowerCase(); // 將輸入的值轉為小寫
+
+    if ((inputValue === 'bill' || inputValue === 'billcipher' ) && !isTriangle) {
+        // 只有當目前不是三角形顯示狀態時，才切換顯示三角形
+        isTriangle = true; // 將狀態設置為顯示三角形
+        const triangle = document.querySelector('.triangle'); // 獲取三角形元素
+        triangle.style.display = 'block'; // 顯示三角形
+        messageElement.textContent = 'Doritos'; // 更改 h1 內容
+        messageElement.classList.add('invisible'); // 讓 h1 內容不可見
+        passwordInput.value = ''; // 清空輸入框
+
+    } else if (isTriangle && (inputValue === 'power' || inputValue === 'lucain')) {
+        // 當三角形顯示且輸入的密碼是 'power' 或 'lucain'，進行跳轉
+        checkPassword(); // 檢查輸入的密碼，進行相應的跳轉
+
+    } else if (isTriangle && inputValue !== 'bill' && inputValue !== 'billcipher' && inputValue !== 'power' && inputValue !== 'lucain') {
+        // 當三角形顯示且輸入不是 'bill'、'power' 或 'lucain'，隱藏三角形並恢復 h1 內容
+        const triangle = document.querySelector('.triangle'); // 獲取三角形元素
+        triangle.style.display = 'none'; // 隱藏三角形
+        messageElement.textContent = '16-15-23-5-18'; // 恢復 h1 的原始內容
+        messageElement.classList.remove('invisible'); // 顯示 h1 內容
+        isTriangle = false; // 重置狀態
+        passwordInput.value = ''; // 清空輸入框
+    } else {
+        // 如果三角形未顯示，執行密碼檢查
+        checkPassword(); // 檢查密碼是否正確
+    }
+};
+
+// 按鈕點擊事件
+    submitButton.addEventListener('click', () => {
+        toggleMessage(); // 切換三角形顯示
+        checkPassword(); // 進行密碼檢查
+    });
 
     // Enter 鍵事件
     document.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') {
-            checkPassword();
+        if (e.key === 'Enter' || e.key === ' ') {
+            toggleMessage(); // 切換三角形顯示
+            checkPassword(); // 進行密碼檢查
         }
     });
+
+    // 在 DOM 加載後添加三角形元素
+    const triangleElement = document.createElement('div');
+    triangleElement.className = 'triangle'; // 設置三角形類名
+    document.body.appendChild(triangleElement); // 將三角形添加到頁面中
 });
 
 
