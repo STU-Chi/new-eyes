@@ -24,4 +24,10 @@ document.addEventListener('contextmenu', function (event) {
     setTimeout(function () {
         messageDiv.style.display = 'none';
     }, 3000);
+
+    // 點擊事件監聽器
+    messageDiv.addEventListener('click', () => {
+    window.location.href = 'Turth.html'; // 跳轉到 Turth.html
+    });
 });
+

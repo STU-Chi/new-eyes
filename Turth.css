@@ -1,36 +1,31 @@
-
-body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    font-family: 'BatterParkFont','Courier New', Courier; /* 終端機風格字體 */
-    background-color: #000000; /* 深藍色背景 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    transform: translateY(0);
+/* 設置最初網頁背景為淺灰色 */
+body {
+    background-color: #000000; /* 淺灰色背景 */
 }
 
-/* 基本樣式設計 */
-.absolute {
+body, html{
+    overflow: hidden; /* 禁用滾動條 */
+}
+
+@font-face {
+  font-family: 'BatterParkFont'; /* 自訂字體名稱 */
+  src: url('fonts/BatterPark.ttf') format('truetype'); /* 字體文件路徑及格式 */
+  font-display: block;
+}
+
+@font-face {
+  font-family: 'kidwrite'; /* 自訂字體名稱 */
+  src: url('fonts/kidwrite.ttf') format('truetype'); /* 字體文件路徑及格式 */
+  font-display: block;
+}
+
+/* 禁止選取內容 */
+body, .modal, #modalContent, .large-text {
+    user-select: none;
+  }
+
+  .read-button{
     position: absolute;
-}
-
-@font-face {
-    font-family: 'BatterParkFont'; /* 自訂字體名稱 */
-    src: url('fonts/BatterPark.ttf') format('truetype'); /* 字體文件路徑及格式 */
-    font-display: block;
-}
-
-@font-face {
-    font-family: 'kidwrite'; /* 自訂字體名稱 */
-    src: url('fonts/kidwrite.ttf') format('truetype'); /* 字體文件路徑及格式 */
-    font-display: block;
-}
-
-.read-button{
     user-select: none; /* 禁用文字選取 */
     font-family: 'kidwrite','Courier New', Courier, monospace;
     background: none;
@@ -39,83 +34,245 @@ body, html {
     font-size: 46px;
     cursor: pointer;
     padding: 0;
-}
+  }
+  
+  .overlay-text {
+    color: white; /* 字體顏色 */
+    font-size: 24px; /* 字體大小 */
+    margin-top: 55px;
+    margin-bottom: 40px; /* 按鈕和文字之間的空間 */
+    text-align: center; /* 文字置中 */
+    z-index: 1003; /* 確保文本在按鈕之上 */
+  }
 
-/* 按鈕只顯示文字的樣式 */
-.text-button {
-    user-select: none; /* 禁用文字選取 */
-    font-family: 'BatterParkFont','Courier New', Courier, monospace;
+  /* 基本樣式 */
+  .text-button {
     background: none;
-        border: none;
-    color: rgb(194, 194, 194); /* 可自行設定文字顏色 */
-    font-size: 46px;
+    border: none;
+    color: rgb(194, 194, 194);
+    font-size: 32px;
     cursor: pointer;
     padding: 0;
-}
-
-.text-button:hover {
-    color: rgb(137, 137, 148); /* 滑鼠移過時文字變色 */
-}
-
-/* 小飄移動畫 */
-@keyframes float {
-    0% {
-        transform: translate(0, 0);
-    }
-    50% {
-        transform: translate(5px, -15px);
-    }
-    100% {
-        transform: translate(0, 0);
-    }
-}
-
-/* 給按鈕加上飄移動畫 */
-.float-button {
-    animation: float 3s ease-in-out infinite;
-}
-
-.modal {
-    user-select: none; /* 禁用文字選取 */
-    display: none;
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 40vh;
-    padding: 20px;
-    background-color: rgba(109, 109, 109, 0.26);
-    color: rgb(255, 255, 255);
-    text-align: center;
-    border-radius: 8px;
-    z-index: 1001;
-    letter-spacing: 3.5px; /* 調整字間距，可以根據需要調整 */
-    font-size: 5vh;
-    font-family: 'kidwrite','Courier New', Courier, monospace;
-}
+  }
 
   
-/* 特殊樣式：字體變大 */
-.large-text {
-    font-size: 9vh; /* 調整字體大小 */
-    color: red; /* 變更顏色，根據需要調整 */
+  .text-button:hover {
+    color: rgb(139, 139, 139);
+    border-color:  rgb(49, 49, 49) ;
+  }
+  
+
+/* 漂浮按鈕更多角度的移動動畫 */
+@keyframes float {
+    0% {
+        transform: translate(0, 0); /* 起始點 (0, 0) */
+      }
+      25% {
+        transform: translate(10px, -10px); /* 右上方移動，往右 20px，往上 20px */
+      }
+      50% {
+        transform: translate(-25px, -10px); /* 同樣高度往左移動，往左 20px */
+      }
+      75% {
+        transform: translate(10px, 10px); /* 往右下方移動，往右 20px，往下 20px */
+      }
+      100% {
+        transform: translate(0, 0); /* 回到起始位置 (0, 0) */
+      }
+  }
+
+  /* 漂浮按鈕動畫 (不規則飄浮) */
+@keyframes float1 {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(10px, -15px);
+  }
+  50% {
+    transform: translate(-20px, -15px);
+  }
+  75% {
+    transform: translate(10px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
-.modal.show {
-    display: block;
+@keyframes float2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  20% {
+    transform: translate(10px, -10px);
+  }
+  50% {
+    transform: translate(-10px,10px);
+  }
+  80% {
+    transform: translate(10px, 10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
 
-.modal-overlay {
-    display: none;
+@keyframes float3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  15% {
+    transform: translate(20px, -15px);
+  }
+  45% {
+    transform: translate(-10px, 20px);
+  }
+  65% {
+    transform: translate(-15px, -10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+.float-button {
+  font-family: 'BatterParkFont','Courier New', Courier, monospace;
+  position: absolute; /* 使用絕對定位 */
+  animation: ease-in-out infinite; /* 將動畫效果應用於所有按鈕 */
+}
+
+/* 漂浮按鈕上下之間留出空格 */
+#floatingButton1 {
+  animation: float1 4s ease-in-out infinite;
+  left: 68%; /* 向左側偏移 */
+  top: 25%;  /* 頂部留出空隙 */
+}
+
+#floatingButton2 {
+  animation: float2 3s ease-in-out infinite;
+  left:10%;
+  top: 35%;  /* 比第一個按鈕下移 */
+}
+
+#floatingButton3 {
+  animation: float3 4s ease-in-out infinite;
+  left: 40%;
+  top: 50%;
+}
+
+#floatingButton4 {
+  animation: float2 4s ease-in-out infinite;
+  left: 70%;
+  top: 70%;
+}
+
+#myFloatingButton {
+  animation: float2 4s ease-in-out infinite;
+  left: 15%; /* 在中央附近 */
+  top: 80%;  /* 接近底部 */
+}
+
+  /* 遮罩層 */
+  .modal-overlay {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-}
+    background-color:  rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
 
-.modal-overlay.show {
-    display: block;
+/* 漂浮按鈕的 CSS */
+#floatingButton1, #floatingButton2, #floatingButton3, #floatingButton4, #myFloatingButton {
+  position: absolute; /* 確保漂浮按鈕可以正確定位 */
 }
+  
+  /* 上按鈕樣式，移到右上角 */
+  #closeTopButton {
+    border-radius: 5px;
+    background-color: rgb(34, 34, 34);
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 1001;
+  }
+  
+  /* 下按鈕樣式 */
+  .modal-button {
+    border-radius: 5px;
+    background-color: rgb(34, 34, 34);
+    color: rgb(255, 255, 255);
+    font-size: 27px;
+    margin: 20px;
+    z-index: 1001;
+    padding: 4px 10px;
+    border: 2px solid #ffffff;
+  }
+  
+  #closeBottomButton {
+    position: absolute; /* 讓按鈕固定位置 */
+    bottom: 0; /* 設定為距離底部 0 */
+    left: 50%; /* 水平置中 */
+    transform: translateX(-50%); /* 修正偏移，確保按鈕在水平中心 */
+    border-radius: 5px;
+    font-size: 27px;
+    margin: 20px;
+    z-index: 1001;
+    padding: 4px 10px;
+  }
+
+  /* 視窗 (modal) */
+  .modal {
+    display: none;
+    position: relative;
+    width: 40vh;
+    margin: auto;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: rgba(65, 64, 64, 0.664);
+    border: 2px solid #41414123;
+    z-index: 1002;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 5vh;
+    font-family: 'kidwrite','Courier New', Courier, monospace;
+  }
+  
+  /* 顯示視窗 */
+  .modal.show {
+    display: block;
+  }
+  
+  /* 特殊樣式：字體變大 */
+  .large-text {
+    font-size: 9vh;
+    color: red;
+  }
+
+/* 定義往上移動並漸隱的動畫 */
+@keyframes slideUpFadeOut {
+    0% {
+      transform: translateY(0); /* 起始位置 */
+      opacity: 1; /* 起始不透明度 */
+    }
+    100% {
+      transform: translateY(-100px); /* 往上移動 100px */
+      opacity: 0; /* 完全透明 */
+    }
+  }
+  
+  /* 當元素開始隱藏時應用的樣式 */
+  .hide-animation {
+    animation: slideUpFadeOut 0.5s forwards; /* 動畫時長 0.5 秒，動畫執行完畢後保持狀態 */
+  }

@@ -3,31 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="Turth.css">
-  <link rel="preload" href="fonts/BatterPark.ttf" as="font" type="font/ttf">
   <title>Turth</title>
+  <link rel="stylesheet" href="Turth.css">
+  <link rel="icon" href="icon/dark.ico" type="image/x-icon">
+  <link rel="preload" href="fonts/BatterPark.ttf" as="font" type="font/ttf">
 </head>
 <body>
 
-<!-- 按鈕 -->
-<button class="absolute text-button float-button"style="left: 12%; top: 100px; animation-delay: -0.8s" id="myButton">
-  CHECK ME
-</button>
+<!-- 顯示遮罩層的按鈕 -->
+<button id="openOverlayButton" class="read-button" style="display: none;">TOUCH</button>
 
-<!-- 隨機出現的按鈕 -->
-<button class="absolute read-button" id="randomButton" style="display: none;">
-    here
-</button>
-
-<!-- 視窗 (modal) 與遮罩層 -->
+<!-- 第一層遮罩層 -->
 <div class="modal-overlay" id="modalOverlay">
-    <div class="modal" id="myModal">
-      <p id="modalContent"> </p>
-    </div>
+  <!-- 上按鈕 -->
+  <button id="closeTopButton" class="text-button modal-button">X</button>
+
+  <!-- 中心漂浮按鈕 -->
+  <p class="overlay-text">這是一段描述文本，請隨意點擊漂浮按鈕！</p>
+  <button id="floatingButton1" class="text-button float-button" >MENRY</button>
+  <button id="floatingButton2" class="text-button float-button">FEARS</button>
+  <button id="floatingButton3" class="text-button float-button">SHAME</button>
+  <button id="floatingButton4" class="text-button float-button">you know me?</button>
+  <button id="myFloatingButton" class="text-button float-button">TURTH</button>
+
+  <!-- 下按鈕 -->
+  <button id="closeBottomButton" class="text-button modal-button">BACK X</button>
 </div>
 
-<!-- 引入外部的 JavaScript 文件 -->
-<script src="Turth.js"></script>
+<!-- 第二層遮罩層，隱藏 -->
+<div class="modal-overlay" id="secondOverlay">
+  <!-- 彈出視窗 -->
+  <div class="modal" id="myModal">
+    <p id="modalContent"> </p>
+  </div>
+</div>
 
+<script src="Turth.js"></script>
 </body>
 </html>

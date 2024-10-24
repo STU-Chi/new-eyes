@@ -1,15 +1,25 @@
-// 初始化按鈕點擊次數
+// 取得元素
 let clickCount = 0;
-
-// 取得按鈕與視窗元素
-const button = document.getElementById('myButton');
-const modal = document.getElementById('myModal');
-const modalContent = document.getElementById('modalContent');
+const openOverlayButton = document.getElementById('openOverlayButton');
 const modalOverlay = document.getElementById('modalOverlay');
-const randomButton = document.getElementById('randomButton');
+const secondOverlay = document.getElementById('secondOverlay');
+const closeTopButton = document.getElementById('closeTopButton');
+const closeBottomButton = document.getElementById('closeBottomButton');
+const myModal = document.getElementById('myModal');
+const modalContent = document.getElementById('modalContent');
+const floatingButton = document.getElementById('myFloatingButton');
+const floatingButton1 = document.getElementById('floatingButton1');
+const floatingButton2 = document.getElementById('floatingButton2');
+const floatingButton3 = document.getElementById('floatingButton3');
+const floatingButton4 = document.getElementById('floatingButton4');
 
-// 定義點擊事件
-button.addEventListener('click', () => {
+// 打開第一層遮罩層的按鈕
+openOverlayButton.addEventListener('click', () => {
+  modalOverlay.style.display = 'flex'; // 顯示第一層遮罩層
+});
+
+// 漂浮按鈕點擊，顯示第二層遮罩層並改變文字
+floatingButton.addEventListener('click', () => {
   clickCount++;
 
   // 根據點擊次數變更視窗內的文字
@@ -42,41 +52,123 @@ button.addEventListener('click', () => {
     modalContent.classList.remove('large-text'); // 移除大字樣式
   }
 
-  // 顯示視窗和遮罩層
-  modal.classList.add('show');
-  modalOverlay.classList.add('show');
-});
+  secondOverlay.style.display = 'flex'; // 顯示第二層遮罩層
+  myModal.classList.add('show'); // 顯示彈出視窗
+  });
 
-// 只有點擊遮罩層時關閉視窗
-modalOverlay.addEventListener('click', (event) => {
-  if (event.target === modalOverlay) {
-    modal.classList.remove('show');
-    modalOverlay.classList.remove('show');
+ // 只有點擊遮罩層時關閉視窗
+secondOverlay.addEventListener('click', (event) => {
+  if (event.target === secondOverlay) {
+  secondOverlay.style.display = 'none'; // 隱藏第二層遮罩層
+  myModal.classList.remove('show'); // 隱藏彈出視窗
   }
 });
 
 // 阻止點擊視窗時關閉
-modal.addEventListener('click', (event) => {
+myModal.addEventListener('click', (event) => {
   event.stopPropagation(); // 阻止事件冒泡
+}); 
+
+/* // 點擊彈出視窗退出第二層遮罩層
+myModal.addEventListener('click', (event) => {
+  secondOverlay.style.display = 'none'; // 隱藏第二層遮罩層
+  myModal.classList.remove('show'); // 隱藏彈出視窗
+});*/
+
+// 上按鈕點擊事件，添加動畫並隱藏第一層遮罩層
+closeTopButton.addEventListener('click', () => {
+  // 先添加動畫 class
+  modalOverlay.classList.add('hide-animation');
+  
+  // 設定動畫結束後隱藏元素
+  modalOverlay.addEventListener('animationend', () => {
+    modalOverlay.style.display = 'none'; // 隱藏第一層遮罩層
+    modalOverlay.classList.remove('hide-animation'); // 移除動畫 class，為了下次打開能正常顯示
+  }, { once: true }); // 使用 once: true 保證事件只執行一次
 });
+
+// 下按鈕點擊事件，添加動畫並隱藏第一層遮罩層
+closeBottomButton.addEventListener('click', () => {
+  modalOverlay.classList.add('hide-animation');
+  
+  modalOverlay.addEventListener('animationend', () => {
+    modalOverlay.style.display = 'none';
+    modalOverlay.classList.remove('hide-animation');
+  }, { once: true });
+});
+
+
+// 限制漂浮按鈕範圍的函數
+function constrainFloatingButton(button) {
+  const overlayRect = modalOverlay.getBoundingClientRect();
+  const topButtonRect = closeTopButton.getBoundingClientRect();
+  const bottomButtonRect = closeBottomButton.getBoundingClientRect();
+
+  // 計算上下限範圍
+  const minY = topButtonRect.bottom; // 不超過上方關閉按鈕的底部
+  const maxY = bottomButtonRect.top - button.offsetHeight; // 不超過下方關閉按鈕的頂部
+
+  // 隨機計算新位置，保持在範圍內
+  const randomX = Math.random() * (overlayRect.width - button.offsetWidth);
+  const randomY = Math.random() * (maxY - minY) + minY;
+
+  // 設定新位置
+  button.style.left = `${randomX}px`;
+  button.style.top = `${randomY}px`;
+}
+
+// 將所有漂浮按鈕的範圍設置在關閉按鈕之間
+function setupFloatingButtons() {
+  constrainFloatingButton(floatingButton);
+  constrainFloatingButton(floatingButton1);
+  constrainFloatingButton(floatingButton2);
+  constrainFloatingButton(floatingButton3);
+  constrainFloatingButton(floatingButton4);
+}
+
+// 固定漂浮按鈕內容
+floatingButton1.addEventListener('click', () => {
+  secondOverlay.style.display = 'flex';
+  myModal.classList.add('show');
+  modalContent.textContent = "這是漂浮按鈕1的內容";
+});
+
+floatingButton2.addEventListener('click', () => {
+  secondOverlay.style.display = 'flex';
+  myModal.classList.add('show');
+  modalContent.textContent = "這是漂浮按鈕2的內容";
+});
+
+floatingButton3.addEventListener('click', () => {
+  secondOverlay.style.display = 'flex';
+  myModal.classList.add('show');
+  modalContent.textContent = "這是漂浮按鈕3的內容";
+});
+
+floatingButton4.addEventListener('click', () => {
+  secondOverlay.style.display = 'flex';
+  myModal.classList.add('show');
+  modalContent.textContent = "這是漂浮按鈕4的內容";
+});
+
 
 // 隨機出現按鈕
 function showRandomButton() {
-    // 隨機設定按鈕的顯示位置
-    const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
-    const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
-  
-    randomButton.style.left = randomX + 'px';
-    randomButton.style.top = randomY + 'px';
-  
-    // 按鈕顯示
-    randomButton.style.display = 'block';
-  
-    // 設定按鈕隨機時間後隱藏
-    setTimeout(() => {
-      randomButton.style.display = 'none';
-    }, 2000); // 2秒後隱藏
-  }
-  
-  // 每隔3秒隨機顯示按鈕
-  setInterval(showRandomButton, 10000);
+  // 隨機設定按鈕的顯示位置
+  const randomX = Math.floor(Math.random() * (window.innerWidth - 100));
+  const randomY = Math.floor(Math.random() * (window.innerHeight - 50));
+
+  openOverlayButton.style.left = randomX + 'px';
+  openOverlayButton.style.top = randomY + 'px';
+
+  // 按鈕顯示
+  openOverlayButton.style.display = 'block';
+
+  // 設定按鈕隨機時間後隱藏
+  setTimeout(() => {
+    openOverlayButton.style.display = 'none';
+  }, 2000); // 2秒後隱藏
+}
+
+// 每隔3秒隨機顯示按鈕
+setInterval(showRandomButton, 5000);
