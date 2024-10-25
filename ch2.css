@@ -29,7 +29,7 @@ body {
 .buttons button {
     user-select: none; /* 禁用文字選取 */
     margin-bottom: 15px; /* 每個按鈕之間的間距 */
-    padding: 15px 70px;
+    padding: 15px 7vh;
     font-size: 23px;
     background-color: #000000;
     color: white;
