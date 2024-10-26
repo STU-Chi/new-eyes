@@ -130,25 +130,25 @@ function setupFloatingButtons() {
 floatingButton1.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
-  modalContent.textContent = "這是漂浮按鈕1的內容";
+  modalContent.textContent = "I see all~";
 });
 
 floatingButton2.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
-  modalContent.textContent = "這是漂浮按鈕2的內容";
+  modalContent.textContent = "ha! one more baby";
 });
 
 floatingButton3.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
-  modalContent.textContent = "這是漂浮按鈕3的內容";
+  modalContent.textContent = "shame on you";
 });
 
 floatingButton4.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
-  modalContent.textContent = "這是漂浮按鈕4的內容";
+  modalContent.textContent = "because I away see you";
 });
 
 
