@@ -87,18 +87,18 @@ h1::after {
         transform: translate(2px, 2px);
     }
     100% {
-        clip: rect(30px, 2300px, 150px, 0);
+        clip: rect(25px, 2300px, 150px, 0);
         transform: translate(-1px, -1px);
     }    
 }
 
 @keyframes glitch-bottom {
     50% {
-        clip: rect(75px, 2300px, 130px, 0);
+        clip: rect(45px, 2300px, 130px, 0);
         transform: translate(-2px, -2px);
     }
     100% {
-        clip: rect(105px, 2300px, 140px, 0);
+        clip: rect(75px, 2300px, 140px, 0);
         transform: translate(2px, 2px);
     }
 }
