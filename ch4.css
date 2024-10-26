@@ -60,7 +60,7 @@ h1::after {
     left: 2px;
     text-shadow: -2px 0 blue;
     clip: rect(85px, 1200px, 140px, 0);
-    animation: glitch-bottom 0.5s infinite;
+    animation: glitch-bottom 0.8s infinite;
 }
 
 /* 闪烁和抖动效果 */
@@ -98,7 +98,7 @@ h1::after {
         transform: translate(-2px, -2px);
     }
     100% {
-        clip: rect(75px, 2300px, 140px, 0);
+        clip: rect(85px, 2300px, 140px, 0);
         transform: translate(2px, 2px);
     }
 }
