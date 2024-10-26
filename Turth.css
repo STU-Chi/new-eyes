@@ -55,12 +55,21 @@ body, .modal, #modalContent, .large-text {
     padding: 0;
   }
 
-  
-  .text-button:hover {
-    color: rgb(139, 139, 139);
-    border-color:  rgb(49, 49, 49) ;
+  #closeTopButton:hover{
+    color: rgb(0 0 0);
+    border-color:  rgb(27 27 27) ;
+    background:#ffffffdb; 
   }
-  
+
+  #closeBottomButton:hover{
+    color: rgb(0 0 0);
+    border-color:  rgb(27 27 27) ;
+    background:#ffffffdb; 
+  }
+
+  .text-button:hover {
+    color: rgb(111 110 110);
+  }
 
 /* 漂浮按鈕更多角度的移動動畫 */
 @keyframes float {
