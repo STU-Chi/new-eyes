@@ -370,7 +370,7 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   }
 
   .modal.show{
-    right: 5px;
+    right: 3px;
   }
 
   .modal-overlay {
