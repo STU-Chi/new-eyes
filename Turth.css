@@ -291,7 +291,6 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
 /* 顯示視窗 */
 .modal.show {
   display: block;
-  right: 5px;
 }
 
 /* 特殊樣式：字體變大 */
@@ -368,6 +367,10 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   .overlay-text{
     font-size:20px;
     margin-top:60px;
+  }
+
+  .modal.show{
+    right: 5px;
   }
 
   .modal-overlay {
