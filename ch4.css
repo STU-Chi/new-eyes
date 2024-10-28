@@ -109,6 +109,7 @@ body.slide-down {
 
 /* 返回按鈕樣式 */
 .back-button {
+    user-select: none; /* 禁用文字選取 */
     position: absolute;
     top: 20px;
     left: 20px; /* 距離頁面左邊的距離 */

@@ -335,6 +335,7 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
 
    /* GIF 圖片 */
   .center-gif {
+    user-select: none; /* 禁用文字選取 */
     margin-right: 5px;
     margin-top: 20px;
     width: 200px; /* 調整 GIF 的寬度 */
@@ -370,7 +371,7 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   }
 
   .modal.show{
-    right: 3px;
+    right: 5px;
   }
 
   .modal-overlay {

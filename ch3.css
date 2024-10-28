@@ -63,6 +63,7 @@ body.slide-down {
 
 /* 設定訊息顯示區域的樣式 */
 .right-click-message {
+    user-select: none; /* 禁用文字選取 */
     cursor: pointer; /* 鼠標懸停時顯示為手型 */
     position: fixed;
     bottom: 20px;
