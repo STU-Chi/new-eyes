@@ -379,4 +379,8 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   .text-button{
     font-size:23px;
   }
+
+  #floatingButton4 {
+    animation: float1 4s ease-in-out infinite;
+    }
 } 
