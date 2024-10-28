@@ -27,6 +27,7 @@ h1 {
     font-size: 12vh; /* 設置字體大小 */
     text-align: center; /* 標題居中 */
     letter-spacing:0.3em;
+    overflow: hidden;
 }
 
 body.slide-down {
@@ -115,8 +116,11 @@ body.slide-down {
     }
 
     .right-click-message {
-        font-size: 17px;
+        font-family: 'Arial', sans-serif; /* 選擇無襯線字型 */
+        letter-spacing: 0.1em; /* 增加行距以避免文字擠在一起 */
+        font-size: 15px;
         top: 65%;
+        bottom: 25%;
     }
 }
 
@@ -138,14 +142,14 @@ body.slide-down {
     }
 
     .back-button {
-        padding: 1vh 4vw;
-        font-size: 8vw;
+        padding: 1vh 3vw;
+        font-size: 5vw;
         left: 3px;
         margin-top: 10vh;
     }
 
     h1 {
-        font-size: 6vh;
+        font-size: 8vw;
         letter-spacing: 0.3em;
         margin: 2vh;
         border: 5px solid transparent;

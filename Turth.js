@@ -162,13 +162,13 @@ function showRandomButton() {
   openOverlayButton.style.top = randomY + 'px';
 
   // 按鈕顯示
-  openOverlayButton.style.display = 'block';
+  document.getElementById('openOverlayButton').style.display = 'block';
 
   // 設定按鈕隨機時間後隱藏
   setTimeout(() => {
     openOverlayButton.style.display = 'none';
-  }, 2000); // 2秒後隱藏
+  }, 3000); // 4秒後隱藏
 }
 
 // 每隔3秒隨機顯示按鈕
-setInterval(showRandomButton, 5000);
+setInterval(showRandomButton, 7000);
