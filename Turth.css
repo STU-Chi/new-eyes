@@ -349,8 +349,8 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
 
   #closeTopButton {
     font-size: 20px;
-    top: 10px;
-    right: -10px;
+    top: -5px;
+    right: -15px;
   }
 
   #closeBottomButton {
@@ -361,8 +361,8 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   }
 
   .overlay-text{
-    font-size:22px;
-    margin-top:70px;
+    font-size:20px;
+    margin-top:60px;
   }
 
   .modal-overlay {
