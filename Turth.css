@@ -335,6 +335,7 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
 
    /* GIF 圖片 */
   .center-gif {
+    margin-right: 5px;
     margin-top: 20px;
     width: 200px; /* 調整 GIF 的寬度 */
     height: auto; /* 保持高度比例 */
@@ -360,12 +361,13 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   }
 
   .overlay-text{
+    font-size:22px;
     margin-top:70px;
   }
 
   .modal-overlay {
     top: 0;
-    left: 5%;
+    left: 3%;
     width: 90%;
     height: 96%;
   }
