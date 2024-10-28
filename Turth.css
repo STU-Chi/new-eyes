@@ -347,10 +347,14 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
     width: 50px;
   }
 
+  .read-button:focus {
+    outline: none; /* 移除焦點樣式 */
+  }
+
   #closeTopButton {
     font-size: 20px;
     top: -5px;
-    right: -15px;
+    right: -23px;
   }
 
   #closeBottomButton {
