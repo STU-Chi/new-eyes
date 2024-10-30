@@ -402,3 +402,10 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
     }
 
 } 
+
+/* 筆電螢幕樣式：1024px 到 1366px 寬度區間 */
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  .center-gif {
+    width: 320px;
+  }
+}
