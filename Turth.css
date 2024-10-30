@@ -402,3 +402,13 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
     }
 
 } 
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  
+  .center-gif {
+    width: 290px;
+  }
+  .read-button{
+    width: 80px;
+  }
+}
