@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
 const toggleMessage = () => {
     const inputValue = passwordInput.value.toLowerCase(); // 將輸入的值轉為小寫
 
-    if ((inputValue === 'bill' || inputValue === 'billcipher' ) && !isTriangle) {
+    if ((inputValue === 'bill' || inputValue === 'billcipher' || inputValue === 'bill cipher' ) && !isTriangle) {
         // 只有當目前不是三角形顯示狀態時，才切換顯示三角形
         isTriangle = true; // 將狀態設置為顯示三角形
         const triangle = document.querySelector('.triangle'); // 獲取三角形元素
@@ -51,7 +51,7 @@ const toggleMessage = () => {
         // 當三角形顯示且輸入的密碼是 'power' 或 'lucain'，進行跳轉
         checkPassword(); // 檢查輸入的密碼，進行相應的跳轉
 
-    } else if (isTriangle && inputValue !== 'bill' && inputValue !== 'billcipher' && inputValue !== 'power' && inputValue !== 'lucain') {
+    } else if (isTriangle && inputValue !== 'bill' && inputValue !== 'billcipher' && inputValue !== 'bill cipher' && inputValue !== 'power' && inputValue !== 'lucain') {
         // 當三角形顯示且輸入不是 'bill'、'power' 或 'lucain'，隱藏三角形並恢復 h1 內容
         const triangle = document.querySelector('.triangle'); // 獲取三角形元素
         triangle.style.display = 'none'; // 隱藏三角形

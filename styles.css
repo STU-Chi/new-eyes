@@ -25,7 +25,7 @@ h1 {
     border-right: 40px solid transparent;
     border-bottom: 65px solid #FFFFFF;
     position: absolute; /* 絕對定位三角形 */
-    top: 40%; /* 根據需要調整 */
+    top: 42%; /* 根據需要調整 */
     transform: translateX(-50%); /* 居中 */
     display: none; /* 初始隱藏 */
 }
@@ -193,10 +193,11 @@ body.slide-up {
         height: 0;
         border-left: 25px solid transparent;
         border-right: 25px solid transparent;
-        border-bottom: 45px solid #FFFFFF;
+        border-bottom: 40px solid #FFFFFF;
         position: absolute;
         transform: translateX(-25%);
         display: none;
+        top: 41%;
     }
 
     .text-item {
@@ -231,7 +232,7 @@ body.slide-up {
 
     body, html{
      font-family: 'MV Boli', 'mvboliFont','YouMurderer BB'; /* 終端機風格字體 */
-     letter-spacing: 0.2em
+     letter-spacing: 0.3em
     }
 
     .text-item {

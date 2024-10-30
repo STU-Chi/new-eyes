@@ -68,7 +68,7 @@ opacity: 0.8; /* 當圖片被滑鼠懸停時，改變透明度 */
 
 .overlay-text {
   color: white; /* 字體顏色 */
-  font-size: 24px; /* 字體大小 */
+  font-size: 2vw; /* 字體大小 */
   margin-top: 55px;
   margin-bottom: 40px; /* 按鈕和文字之間的空間 */
   text-align: center; /* 文字置中 */
@@ -80,7 +80,7 @@ opacity: 0.8; /* 當圖片被滑鼠懸停時，改變透明度 */
   background: none;
   border: none;
   color: rgb(194, 194, 194);
-  font-size: 32px;
+  font-size: 3vw;
   cursor: pointer;
   padding: 0;
 }
