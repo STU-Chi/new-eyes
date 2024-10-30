@@ -271,7 +271,7 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
 .modal {
   display: none;
   position: relative;
-  width: 40vh;
+  width: 35vw;
   margin: auto;
   color: #ffffff;
   padding: 20px;
@@ -284,7 +284,7 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   align-items: center;
   text-align: center;
   letter-spacing: 2px;
-  font-size: 5vh;
+  font-size: 4vw;
   font-family: 'kidwrite','Courier New', Courier, monospace;
 }
 
@@ -337,7 +337,7 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   .center-gif {
     user-select: none; /* 禁用文字選取 */
     margin-right: 5px;
-    margin-top: 20px;
+    margin-top: 13px;
     width: 200px; /* 調整 GIF 的寬度 */
     height: auto; /* 保持高度比例 */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* 圍繞 GIF 的模糊陰影 */
@@ -394,4 +394,11 @@ position: absolute; /* 確保漂浮按鈕可以正確定位 */
   #floatingButton4 {
     animation: float1 4s ease-in-out infinite;
     }
+
+    .modal {
+      width: 40vh;
+      padding: 20px;
+      font-size: 5vh;
+    }
+
 } 
