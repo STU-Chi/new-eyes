@@ -96,7 +96,7 @@ h1 {
     user-select: none; 
     position: absolute;
     padding: 20px;
-    font-size: 5vh;
+    font-size: 6vh;
     color: white;
     border: 2px solid transparent; 
     position: relative;
@@ -187,7 +187,7 @@ body.slide-up {
     }
 
     .text-item {
-        font-size: 6vh;
+        font-size: 5.5vh;
         padding: 15px;
         margin: 3vh;
     }
