@@ -1,46 +1,42 @@
-/* 全局樣式設定，添加往下切換過渡效果 */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Courier New', Courier, monospace; /* 終端機風格字體 */
-    background-color: #000000; /* 深藍色背景 */
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: #000000; 
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease; /* 切換過渡 */
+    transition: transform 0.5s ease; 
     transform: translateY(0);
 }
-
-/* 禁用整個頁面的滾動 */
 
 body {
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* 禁用滾動條 */
+    overflow: hidden;
 } 
 
 h1 {
-    user-select: none; /* 禁用文字選取 */
-    font-family: 'MurdererFont', sans-serif; /* 應用自訂字體到標題，並設定備用字體 */
-    font-size: 12vh; /* 設置字體大小 */
-    text-align: center; /* 標題居中 */
+    user-select: none; 
+    font-family: 'MurdererFont', sans-serif; 
+    font-size: 12vh;
+    text-align: center; 
     text-shadow: 
     2px 2px red, 
     -2px -2px blue, 
-    1px 1px green; /* 創建扭曲的陰影效果 */
+    1px 1px green; 
     letter-spacing:0.3em;
     position: relative;
     animation: glitch 1s infinite;
 }
 
-/* 創建多個不同層次的重影 */
 h1::before, h1::after {
-    font-family: 'MurdererFont', sans-serif; /* 應用自訂字體到標題，並設定備用字體 */
+    font-family: 'MurdererFont', sans-serif; 
     content: "You cheated, didn't you?";
     position: absolute;
-    color: #ff5e00; /* 螢光綠字體顏色 */
+    color: #ff5e00; 
     left: 0;
     top: 0;
     width: 100%;
@@ -63,7 +59,6 @@ h1::after {
     animation: glitch-bottom 0.9s infinite;
 }
 
-/* 闪烁和抖动效果 */
 @keyframes glitch {
     20% {
         transform: translate(-2px, 2px);
@@ -80,7 +75,6 @@ h1::after {
 
 }
 
-/* 頂部和底部的偏移和閃爍 */
 @keyframes glitch-top {
     50% {
         clip: rect(0px, 2300px, 120px, 0);
@@ -104,20 +98,19 @@ h1::after {
 }
 
 body.slide-down {
-    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+    transform: translateY(100%); 
 }
 
-/* 返回按鈕樣式 */
 .back-button {
-    user-select: none; /* 禁用文字選取 */
+    user-select: none; 
     position: absolute;
     top: 20px;
-    left: 20px; /* 距離頁面左邊的距離 */
+    left: 20px; 
     padding: 12px 30px;
     font-size: 30px;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    border:  2px solid #fcfcfc; /* 螢光綠邊框 */;
+    border:  2px solid #fcfcfc;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -129,25 +122,23 @@ body.slide-down {
 }
 
 .tooltip {
-    user-select: none; /* 禁用文字選取 */
+    user-select: none;
     position: absolute;
     background-color: rgba(0, 0, 0, 0.8);
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
-    pointer-events: none; /* 防止鼠標和提示框互動 */
-    display: none; /* 初始隱藏 */
+    pointer-events: none; 
+    display: none;
     font: normal normal normal 14px / 1.4em proxima-n-w01-reg;
 }
 
 @font-face {
-    font-family: 'MurdererFont'; /* 自訂字體名稱 */
-    src: url('fonts/MURDERER.TTF') format('truetype'); /* 字體文件路徑及格式 */
+    font-family: 'MurdererFont'; 
+    src: url('fonts/MURDERER.TTF') format('truetype'); 
     font-display: block;
 }
 
-
-/* 手機裝置 */
 @media only screen and (max-width: 768px) {
 
     body, html {
@@ -156,7 +147,7 @@ body.slide-down {
     }
 
     body, html{
-        overflow: hidden; /* 禁用滾動條 */
+        overflow: hidden; 
        }
 
     /* 中央容器 */
@@ -173,13 +164,13 @@ body.slide-down {
     }
 
     h1 {
-        user-select: none; /* 禁用文字選取 */
+        user-select: none; 
         font-size: 5.3vh;
         letter-spacing: 0.3em;
         margin: 2vh;
         border: 5px solid transparent;
         margin-right: 5px;
-        line-height: 1.8; /* 1.8倍字體大小的行高 */
+        line-height: 1.8; 
         text-shadow: 1px 1px red, -1px -1px blue, 1px 1px green;
     }
 
@@ -192,7 +183,6 @@ body.slide-down {
         animation: glitch-bottom 1s infinite;
     }
 
-    /* 頂部和底部的偏移和閃爍 */
     @keyframes glitch-top {
         50% {
             clip: rect(0px, 1200px, 120px, 0);
@@ -224,17 +214,16 @@ body.slide-down {
     }
 
     body, html{
-        overflow: hidden; /* 禁用滾動條 */
+        overflow: hidden; 
        }
 
-    /* 中央容器 */
      .container {
         text-align: center;
         margin: 5px;
     }
 
     .back-button {
-        user-select: none; /* 禁用文字選取 */
+        user-select: none; 
         padding: 1vh 4vw;
         font-size: 8vw;
         left: 3px;
@@ -242,16 +231,10 @@ body.slide-down {
     }
 
     h1 {
-        font-size: 5.3vh;
-        letter-spacing: 0.3em;
-        margin: 2vh;
-        border: 5px solid transparent;
-        margin-right: 5px;
-        line-height: 1.8; /* 1.8倍字體大小的行高 */
         text-shadow: 
         2px 2px red, 
         -2px -2px blue, 
-        1px 1px green; /* 創建扭曲的陰影效果 */
+        1px 1px green; 
         letter-spacing:0.3em;
         position: relative;
         animation: glitch 1s infinite;
@@ -265,7 +248,6 @@ body.slide-down {
         text-shadow: -2px 0 blue;
     }
 
-    /* 頂部和底部的偏移和閃爍 */
     @keyframes glitch-top {
         50% {
             clip: rect(40px, 1200px, 120px, 0);
