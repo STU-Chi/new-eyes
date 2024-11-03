@@ -229,7 +229,7 @@ body.slide-up {
         font-size: 3.5vh;
         margin-left: 5px;
         width: 45vw;
-        max-width: 200px;
+        max-width: 450px;
         margin-bottom: 10px;
         border-radius: 8px;
     }
@@ -238,11 +238,11 @@ body.slide-up {
         padding: 1.8vh 2.5vw;
         font-size: 3vh;
         border-radius: 8px;
-        margin-left: 25px;
+        margin-left: 1.5vw;
     }
 
     h1 {
-        font-size: clamp(2rem, 4em, 50px);
+        font-size: clamp(3em, 4em, 70px);
     }
 
 }

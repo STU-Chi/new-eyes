@@ -21,7 +21,7 @@ body {
 h1 {
     user-select: none; 
     font-family: 'MurdererFont', sans-serif; 
-    font-size: 12vh;
+    font-size: clamp(4em, 12vh, 90px);
     text-align: center; 
     text-shadow: 
     2px 2px red, 
