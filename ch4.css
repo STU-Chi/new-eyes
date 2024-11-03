@@ -117,8 +117,8 @@ body.slide-down {
 }
 
 .back-button:hover {
-    background-color: rgba(0, 0, 0, 0.089);
-    box-shadow: 0 0 10px rgb(255, 255, 255);
+    background-color: rgba(202, 198, 198, 0.719);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.514);
 }
 
 .tooltip {

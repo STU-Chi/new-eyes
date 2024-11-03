@@ -50,25 +50,6 @@ input[type="password"] {
 }
 
 .back-button {
-    position: absolute;
-    border: 2px solid #fcfcfc; 
-    color: #ffffff; 
-    background-color: #000000; 
-    text-decoration: none;
-}
-
-.back-button:hover {
-    border: 2px solid #000000; 
-    background-color: #ffffff; 
-    color: #000000; 
-}
-
-
-body.slide-down {
-    transform: translateY(100%); 
-}
-
-.back-button {
     user-select: none; 
     position: absolute;
     top: 20px;
@@ -84,9 +65,14 @@ body.slide-down {
 }
 
 .back-button:hover {
-    background-color: rgba(0, 0, 0, 0.089);
+    background-color: #e0e0e086; 
     box-shadow: 0 0 10px rgb(255, 255, 255);
 }
+
+body.slide-down {
+    transform: translateY(100%); 
+}
+
 
 @font-face {
     font-family: 'MurdererFont'; 
