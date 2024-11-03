@@ -67,6 +67,7 @@ input[type="password"] {
 .back-button:hover {
     background-color: #e0e0e086; 
     box-shadow: 0 0 10px rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
 }
 
 body.slide-down {
