@@ -9,27 +9,25 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Courier New', Courier, monospace; /* 終端機風格字體 */
+    font-family: 'Courier New', Courier, monospace; 
     color:#fcfcfc;
-    background-color: #000000; /* 深藍色背景 */
+    background-color: #000000; 
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease; /* 切換過渡 */
+    transition: transform 0.5s ease;
     transform: translateY(0);
 }
-
-/* 禁用整個頁面的滾動 */
 
 body {
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* 禁用滾動條 */
+    overflow: hidden;
 } 
 
 .container {
-    max-width: 90vw; /* 使用 viewport 寬度 */
-    margin: 0 auto; /* 讓容器居中 */
+    max-width: 90vw; 
+    margin: 0 auto; 
     background-color: #000000;
     border-radius: 5px ;
     padding: 3% 2%;  
@@ -44,14 +42,14 @@ body {
 }
 
 h1 {
-    font-size: 2em; /* 響應式字體大小 */
+    font-size: 2em; 
     color: #fff;
     margin-bottom: 4vh;
 }
 
 .container h1, .container p {
-    user-select: none; /* 禁用文字選取 */
-    margin-top: 0vh;  /* 調整上方的外部邊距 */
+    user-select: none;
+    margin-top: 0vh; 
 }
 
 .back-button {
@@ -64,10 +62,10 @@ h1 {
 }
 
 body.slide-down {
-    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+    transform: translateY(100%);
 }
 .back-button {
-    user-select: none; /* 禁用文字選取 */
+    user-select: none; 
     transition: background-color 0.3s ease;
 }
 
@@ -92,13 +90,14 @@ textarea {
     justify-content: center;
     gap: 2vh;
 }
+ 
 
 .buttons, .vigenere-section {
     margin-bottom: 2vh;
 }
 
 .buttons button, .vigenere-section button {
-    user-select: none; /* 禁用文字選取 */
+    user-select: none; 
     padding: 2.3vh 1.3vw;
     margin: 6px;
     font-size: 1.4vw;
@@ -112,8 +111,8 @@ textarea {
 }
 
 .buttons button:hover, .vigenere-section button:hover {
-    background-color: #000000;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 顯示淺色覆蓋效果 */
+    background-color: #f5f5f580;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     transition: background-color 0.2s ease;
 }
 
@@ -131,35 +130,32 @@ textarea {
     margin-right: 10px;
 }
 
-
-/* 返回按鈕樣式 */
 .back-button {
-    position: fixed;  /* 固定位置 */
-    top: 10px;        /* 距離螢幕頂部 10px */
-    left: 10px;       /* 距離螢幕左側 10px */
+    position: fixed;  
+    top: 10px;       
+    left: 10px;       
     position: absolute;
     padding: 12px 25px;
     font-size: 27px;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    border:  2px solid #fcfcfc; /* 螢光綠邊框 */;
+    border:  2px solid #fcfcfc; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .back-button:hover {
-    background-color: rgb(0, 0, 0);
+    background-color: #ffffffa2;
     box-shadow: 0 0 10px rgb(255, 255, 255);
-    
 }
 
-/* 小圈圈按鈕 */
+
 .circle-btn {
     width: 30px;
     height: 30px;
     border-radius: 50%;
-    border:  2px solid #fcfcfc; /* 螢光綠邊框 */;
+    border:  2px solid #fcfcfc; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -169,29 +165,26 @@ textarea {
    
 }
 
-/* 圖片顯示區域 */
 .image-modal {
     display: none;
     position: fixed;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(0); /* 初始縮小 */
+    transform: translate(-50%, -50%) scale(0); 
     background-color: rgba(0, 0, 0, 0.8);
     padding: 40px 60px;
     border-radius: 10px;
     text-align: center;
     z-index: 1000;
-    transition: transform 0.3s ease; /* 增加放大縮小動畫 */
+    transition: transform 0.3s ease; 
 }
 
-/* 讓圖片適應視窗大小 */
 .image-modal img {
     max-width: 80.5vw;
     max-height: 80.5vh;
     border-radius: 5px;
 }
 
-/* 關閉按鈕 */
 .close-btn {
     position: absolute;
     top: 10px;
@@ -205,7 +198,6 @@ textarea {
     font-size: 30px;
 }
 
-/* 遮罩背景 */
 .modal-background {
     display: none;
     position: fixed;
@@ -217,23 +209,20 @@ textarea {
     z-index: 999;
 }
 
-/* 顯示時圖片放大 */
 .show-image {
     display: block;
-    transform: translate(-50%, -50%) scale(1); /* 放大 */
+    transform: translate(-50%, -50%) scale(1); 
 }
 
-/* 加載自訂字體 */
 @font-face {
     font-family: 'HliexCipher';
     src: url('fonts/Helixs-Cipher.otf') format('opentype');
     font-display: block;
 }
 
-/* 加密字體應用 */
 .encrypted-text {
     font-family: 'HliexCipher', sans-serif;
-    font-size: 2.2vw;  /* 調整這裡來設置字體大小 */
+    font-size: 2.2vw; 
 }
 
 body.slide-down {
@@ -241,8 +230,6 @@ body.slide-down {
     transition: transform 0.5s ease;
 }
 
-
-/* 手機裝置 */
 @media only screen and (max-width: 768px) {
 
     body, html {
@@ -252,7 +239,7 @@ body.slide-down {
 
     body {
         height: 100vh;
-        overflow: hidden; /* 禁用滾動條 */
+        overflow: hidden; 
     } 
 
     .vigenere-section input {
@@ -273,15 +260,15 @@ body.slide-down {
     }
 
     .encrypted-text {
-        font-size: 6.5vw;  /* 調整這裡來設置字體大小 */
+        font-size: 6.5vw;  
     }
 
     .container {
-        justify-content: flex-start; /* 將內容靠近頂部排列 */
-        padding-top: 2vh; /* 距離頂部一定距離，具體數值可以調整 */
-        justify-content: space-between; /* 保持內容間的間距 */
+        justify-content: flex-start;
+        padding-top: 2vh; 
+        justify-content: space-between; 
         align-items: center;
-        height: 80vh; /* 確保容器不壓縮 */
+        height: 80vh; 
         padding: 2% 5%;
         max-height: 75vh;
         margin-top: 9vh;
@@ -289,9 +276,9 @@ body.slide-down {
 
     .button-container {
         display: flex;
-        flex-direction: row; /* 橫向排列 */
-        flex-wrap: wrap; /* 允許按鈕自動換行 */
-        margin-top: auto; /* 確保按鈕區域下移但不影響上方的區域 */
+        flex-direction: row; 
+        flex-wrap: wrap; 
+        margin-top: auto; 
         gap: 1vh;
     }
 
@@ -309,22 +296,23 @@ body.slide-down {
     }
 
     .buttons {
+        user-select: none; 
         display: flex;
-        flex-direction: row; /* 橫向排列 */
-        flex-wrap: wrap;  /* 讓按鈕在空間不足時自動換行 */
+        flex-direction: row; 
+        flex-wrap: wrap;  
         align-items: center;
-        justify-content: center; /* 讓按鈕均勻分布 */
+        justify-content: center; 
         gap: 1vw;
         margin-bottom: 0;
     }
     
 
     .buttons button {
-      user-select: none; /* 禁用文字選取 */
-      flex: 1 0 10%; /* 確保每行顯示三個按鈕，並自動調整寬度 */
+      user-select: none; 
+      flex: 1 0 10%; 
       padding: 2vh 1.3vw;
       border-radius: 5px;
-      margin: 5px ; /* 直向排列時的間距 */
+      margin: 5px ; 
       cursor: pointer;
     }
 
@@ -335,29 +323,29 @@ body.slide-down {
 
     textarea {
      padding: 6px 8px;
-     vertical-align: top; /* 垂直方向頂對齊 */
-     overflow-y: auto; /* 啟用垂直滾動條，防止溢出 */
+     vertical-align: top; 
+     overflow-y: auto; 
      height: 11vh;
      font-size: 15px;
-     margin-bottom: 1vh; /* 控制 textarea 與按鈕之間的距離 */
-     flex-grow: 0; /* 確保 textarea 不會被壓縮 */
+     margin-bottom: 1vh; 
+     flex-grow: 0; 
     }
 
     .vigenere-section {
-        flex-direction: row; /* 橫向排列 */
-        flex-wrap: wrap;  /* 讓按鈕在空間不足時自動換行 */
+        flex-direction: row;
+        flex-wrap: wrap; 
         justify-content: center;
         align-items: center;
         margin-top: 10px;
     }
 }
 
-/* 平板裝置：針對中等大小螢幕進行調整 */
+
 @media only screen and (min-width: 769px) and (max-width: 1024px) {
     .container {
-        padding: 13px 52px; /* 上下和左右內邊距 */
+        padding: 13px 52px; 
         width: 80%;
-        max-height: 490px;  /* 設定最大高度 */
+        max-height: 490px; 
     }
 
     .container h1, .container p {
@@ -391,33 +379,30 @@ body.slide-down {
         margin-bottom: 0.5vh;
     }
 
-    /* 直向模式下的樣式調整 */
     @media only screen and (orientation: portrait) {
 
         .container {
             padding: 50px;
             width: 80%;
-            max-height: 600px;  /* 設定最大高度 */
+            max-height: 600px;  
         }
 
     }
 
 }
     
-/*大螢幕*/
 @media only screen and (min-width:1025px) {
     .container { 
-            max-width: 95%;   /* 調整寬度，確保不會溢出 */
+            max-width: 95%;   
 }
             
 .buttons {
-        flex-direction: row; /* 橫向排列 */
+        flex-direction: row;
         justify-content: center;
 }
 
 .buttons button {
-    margin-top: 10px; /* 橫向排列時的間距 */
-
+    margin-top: 10px; 
 }
 
 }

@@ -1,50 +1,83 @@
-/* 全局樣式設定，添加往下切換過渡效果 */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Courier New', Courier, monospace; /* 終端機風格字體 */
-    background-color: #000000; /* 深藍色背景 */
+    font-family: 'Courier New', Courier, monospace; 
+    background-color: #000000; 
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease; /* 切換過渡 */
+    transition: transform 0.5s ease; 
     transform: translateY(0);
 }
 
-/* 禁用整個頁面的滾動 */
-
 body {
+    background-color: #000000; 
+    color: #ec5701; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    margin: 0;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* 禁用滾動條 */
-} 
+    overflow: hidden; 
+}
+
+.container {
+    text-align: center;
+}
 
 h1 {
-    user-select: none; /* 禁用文字選取 */
-    font-family: 'MurdererFont', sans-serif; /* 應用自訂字體到標題，並設定備用字體 */
-    font-size: 12vh; /* 設置字體大小 */
-    text-align: center; /* 標題居中 */
+    font-family:'MurdererFont';
+    user-select: none;
+    font-family: 'MurdererFont', sans-serif; 
+    font-size: 12vh; 
+    text-align: center;
     letter-spacing:0.3em;
     overflow: hidden;
 }
 
-body.slide-down {
-    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+input[type="password"] {
+    font-size: 50px;
+    padding: 10px;
+    border: 2px solid #ffffff; 
+    background-color: #000000; 
+    color: #fa5a10; 
+    width: 300px; 
+    text-align: center;
 }
 
-/* 返回按鈕樣式 */
 .back-button {
-    user-select: none; /* 禁用文字選取 */
+    position: absolute;
+    border: 2px solid #fcfcfc; 
+    color: #ffffff; 
+    background-color: #000000; 
+    text-decoration: none;
+}
+
+.back-button:hover {
+    border: 2px solid #000000; 
+    background-color: #ffffff; 
+    color: #000000; 
+}
+
+
+body.slide-down {
+    transform: translateY(100%); 
+}
+
+.back-button {
+    user-select: none; 
     position: absolute;
     top: 20px;
-    left: 20px; /* 距離頁面左邊的距離 */
+    left: 20px; 
     padding: 12px 30px;
     font-size: 30px;
     background-color: rgb(0, 0, 0);
     color: rgb(255, 255, 255);
-    border:  2px solid #fcfcfc; /* 螢光綠邊框 */;
+    border:  2px solid #fcfcfc; 
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -56,15 +89,14 @@ body.slide-down {
 }
 
 @font-face {
-    font-family: 'MurdererFont'; /* 自訂字體名稱 */
-    src: url('fonts/MURDERER.TTF') format('truetype'); /* 字體文件路徑及格式 */
+    font-family: 'MurdererFont'; 
+    src: url('fonts/MURDERER.TTF') format('truetype'); 
     font-display: block;
 }
 
-/* 設定訊息顯示區域的樣式 */
 .right-click-message {
-    user-select: none; /* 禁用文字選取 */
-    cursor: pointer; /* 鼠標懸停時顯示為手型 */
+    user-select: none; 
+    cursor: pointer; 
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -73,16 +105,15 @@ body.slide-down {
     padding: 10px;
     font-size: 20px;
     border-radius: 5px;
-    display: none; /* 預設不顯示 */
+    display: none; 
     z-index: 1000;
     text-shadow: 
                 2px 2px red, 
                 -2px -2px blue, 
-                1px 1px green; /* 創建扭曲的陰影效果 */
+                1px 1px green; 
     letter-spacing:-0.1rem;
 }
 
-/* 手機裝置 */
 @media only screen and (max-width: 768px) {
 
     body, html {
@@ -91,10 +122,9 @@ body.slide-down {
     }
 
     body, html{
-        overflow: hidden; /* 禁用滾動條 */
+        overflow: hidden;
        }
 
-    /* 中央容器 */
      .container {
         text-align: center;
         margin: 5px;
@@ -108,7 +138,7 @@ body.slide-down {
     }
 
     h1 {
-        user-select: none; /* 禁用文字選取 */
+        user-select: none; 
         font-size: 6vh;
         letter-spacing: 0.3em;
         margin: 2vh;
@@ -117,8 +147,8 @@ body.slide-down {
     }
 
     .right-click-message {
-        font-family: 'Arial', sans-serif; /* 選擇無襯線字型 */
-        letter-spacing: 0.1em; /* 增加行距以避免文字擠在一起 */
+        font-family: 'Arial', sans-serif; 
+        letter-spacing: 0.1em;
         font-size: 15px;
         top: 65%;
         bottom: 25%;
@@ -134,10 +164,10 @@ body.slide-down {
     }
 
     body, html{
-        overflow: hidden; /* 禁用滾動條 */
+        overflow: hidden; 
        }
 
-    /* 中央容器 */
+
      .container {
         text-align: center;
         margin: 5px;

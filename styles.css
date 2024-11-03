@@ -1,48 +1,43 @@
-/* 全局樣式設定 */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; /* 終端機風格字體 */
+    font-family: 'MV Boli', 'YouMurderer BB','CipherFontA'; 
     color:white;
     background-color: black;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; /* 使三角形可以相對定位 */
+    position: relative; 
 }
 
 h1 {
     font-size: 3vw;
 }
 
-/* 三角形樣式 */
 .triangle {
     width: 0;
     height: 0;
     border-left: 40px solid transparent;
     border-right: 40px solid transparent;
     border-bottom: 65px solid #FFFFFF;
-    position: absolute; /* 絕對定位三角形 */
-    top: 42%; /* 根據需要調整 */
-    transform: translateX(-50%); /* 居中 */
-    display: none; /* 初始隱藏 */
+    position: absolute;
+    top: 42%;
+    transform: translateX(-50%); 
+    display: none; 
 }
 
-/* 隱形數字樣式 */
 .invisible {
-    user-select: none; /* 禁止文字選取 */
-    visibility: hidden; /* 讓元素隱形，但仍佔據空間 */
+    user-select: none; 
+    visibility: hidden; 
 }
 
-/* 輸入框和按鈕容器樣式 */
 .container {
     text-align: center;
 }
 
-/* 輸入框樣式 */
-#password {
+#ps {
     padding: 2vh;
     font-size: 3vh;
     border: 2px solid white;
@@ -54,7 +49,6 @@ h1 {
  
 }
 
-/* 按鈕樣式 */
 #submit {
     padding: 2vh 1.2vw;
     font-size: 3vh;
@@ -68,27 +62,23 @@ h1 {
 
 }
 
-/* 滑鼠懸停時的樣式 */
 #submit:hover {
-    background-color: darkgray; /* 當滑鼠懸停時，背景顏色改變 */
-    border-color: gray;         /* 邊框顏色也改變 */
+    background-color: darkgray; 
+    border-color: gray;         
     color: black;  
 }
 
-/* 按鈕點擊時變色 */
 #submit:active {
     background-color: rgb(223, 223, 223);
     border-color: rgb(235, 235, 235);
 
 }
 
-/* 錯誤樣式 */
-#password.error {
+#ps.error {
     border-color: red;
     background-color: #941414;
 }
 
-/* 左右晃動動畫 */
 @keyframes shake {
     0% { transform: translateX(0); }
     25% { transform: translateX(-10px); }
@@ -101,28 +91,24 @@ h1 {
     animation: shake 0.5s ease-in-out;
 }
 
-
-/* 繼承上一個網頁的樣式，這裡只需要額外的樣式 */
 .text-item {
     padding: 20px;
     font-size: 6vh;
     color: white;
-    border: 2px solid transparent; /* 初始無邊框 */
+    border: 2px solid transparent; 
     position: relative;
     margin: 3.5vh;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 添加 box-shadow 過渡 */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* 滑鼠懸停樣式 */
 .text-item:hover {
-    border-color: white; /* 懸停時顯示邊框顏色 */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 顯示淺色覆蓋效果 */
+    border-color: white; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* 點擊動畫效果 */
 .text-item.clicked {
-    animation: flash 0.3s ease; /* 點擊時閃爍動畫 */
+    animation: flash 0.3s ease; 
 }
 
 @keyframes flash {
@@ -131,29 +117,26 @@ h1 {
     100% { background-color: rgba(255, 255, 255, 0.2); }
 }
 
-
-/* 為第二個和第三個頁面實現往上切換過渡效果 */
 body, html {
     margin: 0;
     padding: 0;
     height: 100%;
     width: 100%;
-    background-color: #000000; /* 背景 */
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease; /* 切換過渡 */
+    transition: transform 0.5s ease; 
     transform: translateY(0);
 }
 
 body.slide-up {
-    transform: translateY(-100%); /* 當應用向上過渡類時，頁面向上移出 */
+    transform: translateY(-100%); 
 }
 
-/* 添加錯誤樣式和搖晃動畫 */
 .text-item.error {
-    box-shadow: 0 0 10px rgba(211, 8, 8, 0.5); /* 顯示淺色覆蓋效果 */
-    border-color: red; /* 顯示紅色邊框 */
+    box-shadow: 0 0 10px rgba(211, 8, 8, 0.5); 
+    border-color: red; 
     background-color: #941414;
 }
 
@@ -167,20 +150,20 @@ body.slide-up {
 
 
 .text-item.shake {
-    animation: shake 0.5s; /* 搖晃動畫 */
+    animation: shake 0.5s; 
 }
 
 
-/* 手機板 */
+
 @media only screen and (max-width: 768px) {
 
     @font-face {
-        font-family: 'mvboliFont'; /* 自訂字體名稱 */
-        src: url('fonts/mvboli.ttf') format('truetype'); /* 字體文件路徑及格式 */
+        font-family: 'mvboliFont'; 
+        src: url('fonts/mvboli.ttf') format('truetype'); 
     }
 
     body, html{
-     font-family: 'MV Boli', 'YouMurderer BB', 'mvboliFont','CipherFontA'; /* 終端機風格字體 */
+     font-family: 'MV Boli', 'YouMurderer BB', 'mvboliFont','CipherFontA'; 
      letter-spacing: 0.1em
     }
 
@@ -206,7 +189,7 @@ body.slide-up {
         margin: 3vh;
     }
 
-    #password {
+    #ps {
      padding: 10px 10px;
      font-size: 16px;
      margin-left: 5px;
@@ -226,12 +209,12 @@ body.slide-up {
 @media only screen and (min-width: 769px) and (max-width:1024px) {
 
     @font-face {
-        font-family: 'mvboliFont'; /* 自訂字體名稱 */
-        src: url('fonts/mvboli.ttf') format('truetype'); /* 字體文件路徑及格式 */
+        font-family: 'mvboliFont'; 
+        src: url('fonts/mvboli.ttf') format('truetype'); 
     }
 
     body, html{
-     font-family: 'MV Boli', 'mvboliFont','YouMurderer BB'; /* 終端機風格字體 */
+     font-family: 'MV Boli', 'mvboliFont','YouMurderer BB'; 
      letter-spacing: 0.3em
     }
 
@@ -241,11 +224,12 @@ body.slide-up {
         margin-bottom:3.5vh;
     }
     
-    #password {
+    #ps {
         padding: 1.5vh 5vw;
         font-size: 3.5vh;
         margin-left: 5px;
         width: 45vw;
+        max-width: 200px;
         margin-bottom: 10px;
         border-radius: 8px;
     }
@@ -258,7 +242,7 @@ body.slide-up {
     }
 
     h1 {
-        font-size: 4em;
+        font-size: clamp(2rem, 4em, 50px);
     }
 
 }

@@ -7,36 +7,26 @@
   <link rel="stylesheet" href="Turth.css">
   <link rel="icon" type="image/png" sizes="512x512" href="icon/appred.png">
   <link rel="icon" href="icon/dark.ico" type="image/x-icon">
-  <!-- Apple Touch icon -->
   <link rel="apple-touch-icon" sizes="180x180" href="/icon/apple-red.png">
   <link rel="preload" href="fonts/BatterPark.ttf" as="font" type="font/ttf">
 </head>
 <body>
-<!-- 顯示遮罩層的按鈕 -->
+<!-- Oh, looks like Lucain came to visit too -->
 <div class="gif-container"><img src="pic/Don't-open-that-door.gif" class="center-gif"></div>
-
 <img id="openOverlayButton" src="pic/I-see-you.png" class="read-button" style="display: none;">
 
-<!-- 第一層遮罩層 -->
-<div class="modal-overlay" id="modalOverlay">
-  <!-- 上按鈕 -->
+<div class="modal-overlay" id="modalOverlay"><!-- familiar feeling ,right?-->
   <button id="closeTopButton" class="text-button modal-button">X</button>
-
-  <!-- 中心漂浮按鈕 -->
   <p class="overlay-text">show me your options！</p>
   <button id="floatingButton1" class="text-button float-button" >MENRY</button>
   <button id="floatingButton2" class="text-button float-button">FEARS</button>
   <button id="floatingButton3" class="text-button float-button">SHAME</button>
   <button id="floatingButton4" class="text-button float-button">you know me?</button>
   <button id="myFloatingButton" class="text-button float-button">TURTH</button>
-
-  <!-- 下按鈕 -->
   <button id="closeBottomButton" class="text-button modal-button">BACK X</button>
 </div>
 
-<!-- 第二層遮罩層，隱藏 -->
 <div class="modal-overlay second-Overlay" id="secondOverlay">
-  <!-- 彈出視窗 -->
   <div class="modal" id="myModal">
     <p id="modalContent"> </p>
   </div>

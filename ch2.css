@@ -14,7 +14,7 @@ body {
     top: 10px;
     left: 10px;
     display: flex;
-    flex-direction: column; /* 垂直排列按鈕 */
+    flex-direction: column; 
 }
 
 .buttons {
@@ -27,13 +27,13 @@ body {
 }
 
 .buttons button {
-    user-select: none; /* 禁用文字選取 */
-    margin-bottom: 15px; /* 每個按鈕之間的間距 */
+    user-select: none; 
+    margin-bottom: 15px; 
     padding: 15px 7vw;
     font-size: 23px;
     background-color: #000000;
     color: white;
-    border-color: rgb(255, 255, 255); /* 顯示紅色邊框 */
+    border-color: rgb(255, 255, 255);
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
@@ -48,24 +48,24 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Courier New', Courier, monospace; /* 終端機風格字體 */
-    background-color: #000000; /* 深藍色背景 */
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #000000;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.5s ease; /* 切換過渡 */
+    transition: transform 0.5s ease; 
     transform: translateY(0);
 }
 
 body {
-    overflow: hidden; /* 禁用滾動條 */
+    overflow: hidden; 
 }
 
 body.slide-down {
-    transform: translateY(100%); /* 當應用向下過渡類時，頁面向下移出 */
+    transform: translateY(100%); 
 }
 .back-button {
-    user-select: none; /* 禁用文字選取 */
+    user-select: none; 
     transition: background-color 0.3s ease;
 }
 
@@ -78,23 +78,22 @@ body.slide-down {
     height: 80%;
     border: 2px solid rgb(255, 255, 255);
     background-color: #ffffff46;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 顯示淺色覆蓋效果 */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     padding: 20px;
     overflow-y: auto;
     margin-left: 22%;
 }
 
 .dialog-box p {
-    font-size: 20px; /* 字體變大 */
-    line-height: 1.5; /* 增加行距 */
+    font-size: 20px; 
+    line-height: 1.5; 
     white-space: pre-wrap;
 }
 
-/* 手機板 */
 @media only screen and (max-width: 768px) {
 
     body, html{
-     overflow: hidden; /* 禁用滾動條 */
+     overflow: hidden; 
     }
 
     .dialog-box p {
@@ -104,13 +103,13 @@ body.slide-down {
     }
 
     .buttons {
-     flex-direction: row; /* 橫向排列 */
+     flex-direction: row;
      top: 15px;
      left: 0px;
     }
 
     .buttons button {
-     margin: 0 10px; /* 橫向排列時的間距 */
+     margin: 0 10px; 
      font-size: 16px;
      padding: 1vh 10vw;
      border-radius: 8px;
@@ -129,7 +128,6 @@ body.slide-down {
     }
 }
 
-/* 平板裝置：針對中等大小螢幕進行調整 */
 @media only screen and (min-width:769px) and (max-width: 1024px) {
 
     .dialog-text {
@@ -143,9 +141,9 @@ body.slide-down {
     }
 
     .buttons button {
-        display: inline-block; /* 使按鈕能夠設定寬度 */
+        display: inline-block; 
         padding: 13px 52px;
-        text-indent: -5px; /* 文字左移 */
+        text-indent: -5px; 
         font-size: 18px;
     }
 

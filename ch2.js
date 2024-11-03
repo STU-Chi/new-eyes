@@ -1,10 +1,10 @@
-/*ch2*/
 const dialogTextElement = document.getElementById('dialog-text');
 const displayTextButton = document.getElementById('display-text-btn');
 
+//I think it was my greatest patience to be able to finish listening to the story of that purple hippopotamus. X/
 const dialog = [
 
-"Hello STU 22115103 - Hliex ", 
+"Hello my listener ! ", 
 
 "My friend, you have met a terrible, terrible demise. ",
 
@@ -44,7 +44,7 @@ const dialog = [
 
 ];
 
-let isTyping = false; // 用來追蹤是否正在打字
+let isTyping = false; 
 
 function typeText(textArray, index = 0, letterIndex = 0) {
     if (index < textArray.length) {
@@ -53,37 +53,36 @@ function typeText(textArray, index = 0, letterIndex = 0) {
             letterIndex++;
             setTimeout(() => typeText(textArray, index, letterIndex), 70);
         } else {
-            dialogTextElement.textContent += "\n"; // 換行
-            setTimeout(() => typeText(textArray, index + 1), 500); // 開始打下一行
+            dialogTextElement.textContent += "\n"; 
+            setTimeout(() => typeText(textArray, index + 1), 500);
         }
     } else {
-        // 完成打字後重新啟用按鈕
         displayTextButton.disabled = false;
         isTyping = false;
     }
 }
 
 displayTextButton.addEventListener('click', () => {
-    if (!isTyping) { // 確保不會重複啟動打字效果
-        dialogTextElement.textContent = ""; // 清除之前的文字
-        isTyping = true; // 設置為打字狀態
-        displayTextButton.disabled = true; // 禁用按鈕直到打字完成
+    if (!isTyping) { 
+        dialogTextElement.textContent = ""; 
+        isTyping = true; 
+        displayTextButton.disabled = true; 
         typeText(dialog);
     }
 });
 
 
 document.addEventListener('DOMContentLoaded', function () {
-    document.body.classList.add('fade-in'); // 當頁面加載時應用淡入過渡效果
+    document.body.classList.add('fade-in'); 
 
     const backButton = document.getElementById('back-button');
 
     if (backButton) {
         backButton.addEventListener('click', function () {
-            document.body.classList.add('slide-down'); // 添加向下切換過渡效果
+            document.body.classList.add('slide-down'); 
             setTimeout(() => {
-                window.location.href = 'CH.html'; // 返回到第二個網頁
-            }, 500); // 等待過渡完成後再重定向
+                window.location.href = 'CH.html'; 
+            }, 500); 
         });
     }
 });
