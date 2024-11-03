@@ -192,14 +192,14 @@ body.slide-up {
     #ps {
      padding: 10px 10px;
      font-size: 16px;
-     margin-left: 5px;
+     margin-left: 8px;
      width: 130px;
      margin-bottom: 10px;
     }
 
     #submit {
      margin-right: 5px;
-     margin-left: 5px;
+     margin-left: 2px;
      padding: 10px 15px;
      font-size: 16px;
     }
