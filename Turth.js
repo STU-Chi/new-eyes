@@ -126,24 +126,28 @@ floatingButton1.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
   modalContent.textContent = "I see all~";
+  modalContent.classList.remove('large-text'); 
 });
 
 floatingButton2.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
   modalContent.textContent = "ha! one more baby";
+  modalContent.classList.remove('large-text'); 
 });
 
 floatingButton3.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
   modalContent.textContent = "shame on you";
+  modalContent.classList.remove('large-text'); 
 });
 
 floatingButton4.addEventListener('click', () => {
   secondOverlay.style.display = 'flex';
   myModal.classList.add('show');
   modalContent.textContent = "because I away see you";
+  modalContent.classList.remove('large-text'); 
 });
 
 
