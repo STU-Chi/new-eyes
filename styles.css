@@ -20,9 +20,9 @@ h1 {
 .triangle {
     width: 0;
     height: 0;
-    border-left: 40px solid transparent;
-    border-right: 40px solid transparent;
-    border-bottom: 65px solid #FFFFFF;
+    border-left: 7vh solid transparent;
+    border-right: 7vh solid transparent;
+    border-bottom: 11.5vh solid #FFFFFF;
     position: absolute;
     top: 42%;
     transform: translateX(-50%); 
@@ -47,7 +47,8 @@ h1 {
     background-color: black;
     outline: none;
     text-align: center;
- 
+    max-width: 500px;
+    max-height: 250px;
 }
 
 #submit {

@@ -1,6 +1,5 @@
 document.addEventListener('DOMContentLoaded', function () {
     document.body.classList.add('fade-in');
-
     const backButton = document.getElementById('back-button');
 
     if (backButton) {
