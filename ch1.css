@@ -404,9 +404,13 @@ body.slide-down {
 .buttons button {
     margin-top: 10px; 
 }
-
 }
 
-
+@media only screen and (min-width:1820px) {
+    .back-button{
+        padding: 15px 30px;
+        font-size: 4vh;
+    }
+}
 
 

@@ -155,4 +155,26 @@ body.slide-down {
     
 }
 
-
+@media only screen and (min-width:1820px) {
+    .buttons button {
+        padding: 20px 6vw;
+        font-size: 35px;
+        margin-top: 45px;
+        margin-bottom: -20px;
+    }
+    .display-text-btn {
+        top: 45px;
+    }
+    .back-button{
+        padding: 30px 7vw;
+        font-size: 40px;
+    }
+    .dialog-box {
+        margin-right: 25px;
+        width: 80%;
+    }
+    .dialog-box p {
+        font-size: 40px;
+        margin-top: 0px;
+    }
+}

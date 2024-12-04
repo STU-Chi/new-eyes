@@ -184,7 +184,7 @@ body.slide-up {
         position: absolute;
         transform: translateX(-25%);
         display: none;
-        top: 41%;
+        top: 42%;
     }
 
     .text-item {
@@ -250,3 +250,27 @@ body.slide-up {
     }
 
 }
+
+@media only screen and (min-width:1920px) {
+
+    .triangle {
+        width: 0;
+        height: 0;
+        border-left:  7vh solid transparent;
+        border-right: 7vh solid transparent;
+        border-bottom: 10.5vh solid #FFFFFF;
+        position: absolute;
+        transform: translateX(-25%);
+        display: none;
+        top: 40%;
+    }
+
+    #ps {
+        padding: 1.5vh 2vh;
+        font-size: 4vh;
+        max-width: 400px;
+    }
+    h1{
+        font-size: clamp(2.8vw, 3vw, 80px);
+    }
+    }

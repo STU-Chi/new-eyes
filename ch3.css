@@ -154,7 +154,6 @@ body.slide-down {
         overflow: hidden; 
        }
 
-
      .container {
         text-align: center;
         margin: 5px;
@@ -175,4 +174,15 @@ body.slide-down {
         margin-right: 5px;
     }
 
+}
+
+@media only screen and (min-width:1920px) {
+    .right-click-message {
+        font-size: 4vh;
+    }
+    .back-button{
+        left: 25px;
+        padding: 15px 30px;
+        font-size: 5vh;
+    }
 }
