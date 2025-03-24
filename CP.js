@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    // 用于打字效果
     function typeEffect(element, message, speed = 20) {
         let i = 0;
         function typeWriter() {
